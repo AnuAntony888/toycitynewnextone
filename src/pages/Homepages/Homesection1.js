@@ -23,7 +23,7 @@ const Homesection1 = () => {
             lg: "21vw",
             md: "20vw",
             sm: "20vw",
-            xs: "46vw",
+            xs: "55vw",
           }}
         />
       </Grid>
@@ -41,13 +41,13 @@ const Homesection1 = () => {
       />
     </div>
    {/* *****************************section 2***************************** */}
-   <div className={styles.homepadding}>
+   <div className={styles.homepadding2}>
       <Grid container spacing={2}>
         <Grid item xs={12} md={6} lg={6} sm={12}>
           <TypographyText
             Typography={<>About Us</>}
             fontWeight="bolder"
-            variant={!isSmallScreen ? "h5" : "h6"}
+            variant={isSmallScreen ?"h5":"h4"}
             textAlign="left"
           />
           <DividerComp />

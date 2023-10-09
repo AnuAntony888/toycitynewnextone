@@ -1,20 +1,36 @@
-
 .homepadding {
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 50px;
-  
 }
-  .homeoffer1img {
-    height: 100%;
-    width: 100%;
-  }
-  .sep{
-    width: 100px;
-    height: 5px;  
-    background: red;
-   margin-top: 3%;
-   margin-bottom: 3%;
-  
-  }
-  
+.homepadding1 {padding-top: 50px;}
+.homepadding2 {
+  padding-left: 5%;
+  padding-right: 5%;}
+.homeoffer1img {
+  height: 100%;
+  width: 100%;
+}
+.sep {
+  width: 100px;
+  height: 5px;
+  background: red;
+  margin-top: 3%;
+  margin-bottom: 3%;
+
+}
+.avatarContainer {
+  background-color: darkgreen !important;
+  width: 70px !important;
+  height: 20px;
+  float: right;
+  position: relative;
+  font-size: 0.85rem;
+  z-index: 1000;
+}
+.flbrandtxt1 {
+  font-size: 0.9rem;
+font-weight: 600;
+  width: 100%;
+  text-align: left;
+}
