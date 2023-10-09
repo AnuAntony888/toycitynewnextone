@@ -22,10 +22,10 @@
 .avatarContainer {
   background-color: darkgreen !important;
   width: 70px !important;
-  height: 20px;
+  height: 20px !important;
   float: right;
   position: relative;
-  font-size: 0.85rem;
+  font-size: 0.85rem !important;
   z-index: 1000;
 }
 .flbrandtxt1 {

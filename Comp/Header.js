@@ -75,7 +75,7 @@ const Header = () => {
 export default Header;
 export const navItems = [
   <Link href="#">Home</Link>,
-  <Link href={"/aboutus"}>About Us</Link>,
+  <Link href={"/Aboutus"}>About Us</Link>,
   <Link href={"/brands"}>Brands</Link>,
   <Link href={"/Partners"}>Partners</Link>,
   <Link href={"/newsandevents"}>News and events</Link>,
