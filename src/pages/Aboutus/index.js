@@ -283,10 +283,10 @@ const Index = () => {
                 <br />
                 Our dedicated team works diligently to ensure maximum brand
                 exposure in the market. We understand the importance of a strong
-                market presence, and that's why we prioritize your brand's
+                market presence, and thats why we prioritize your brands
                 safety and success. When you partner with us, you can rest
                 assured knowing that your brand is in capable hands. Together,
-                we'll embark on a journey to launch your brand with precision,
+                well embark on a journey to launch your brand with precision,
                 creativity, and unwavering commitment to achieving outstanding
                 results.
               </>
@@ -316,7 +316,7 @@ const Index = () => {
             </Grid>
           </Grid>
         {datas.map((data, index) => (
-          <Grid item xs={12} md={6} lg={3} sm={12}>
+          <Grid item xs={12} md={6} lg={3} sm={12} key={index}>
             <Card
               sx={{
                 backgroundImage: data.url,
