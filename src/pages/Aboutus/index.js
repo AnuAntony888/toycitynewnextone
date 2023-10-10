@@ -16,7 +16,7 @@ const Index = () => {
   const datas = [
     {
       url: "url(/mission.jpg)",
-      txt: "Branding",
+      txt: "Instore branding",
       txt2: (
         <>
           ToyCity aims to be the leading and most efficient toy distribution
@@ -28,7 +28,7 @@ const Index = () => {
       button: "Read More",
     },
     {
-      url: "url(/vission.jpg)",
+      url: "url(/mission.jpg)",
       txt: "Advertising",
       txt2: (
         <>
@@ -42,7 +42,20 @@ const Index = () => {
     },
     {
       url: "url(/vission.jpg)",
-      txt: "Advertising, ",
+      txt: "launch events",
+      txt2: (
+        <>
+          ToyCity aims to be the leading and most efficient toy distribution
+          company in the MENA region. We are dedicated to delivering a wide range
+          of high-quality toys, fostering joy and igniting imagination in the
+          heart of children.
+        </>
+      ),
+      button: "Read More",
+    },
+    {
+      url: "url(/vission.jpg)",
+      txt: "Orientation programs ",
       txt2: (
         <>
           ToyCity aims to be the leading and most efficient toy distribution
@@ -239,12 +252,22 @@ const Index = () => {
       <Grid container spacing={2} className={styles.homepadding}>
         <Grid item xs={12} md={12} lg={12} sm={12}>
           <TypographyText
-            textAlign="left"
+            textAlign="centre"
             Typography={<>What We Offer</>}
             fontWeight="bolder"
             variant={isSmallScreen ? "h5" : "h4"}
           />
-          <DividerComp />
+              <Grid
+              item
+              xs={12}
+              md={12}
+              lg={12}
+              sm={12}
+              sx={{ display: "flex", justifyContent: "center" }}
+            >
+              <DividerComp />
+            </Grid>
+
           <TypographyText
             textAlign="left"
             Typography={
@@ -272,9 +295,28 @@ const Index = () => {
         </Grid>
       </Grid>
       {/* *****************************section 4***************************** */}
-      <Grid container spacing={2} className={styles.homepadding}>
+      <Grid container spacing={2} className={styles.homepadding} sx={{paddingBottom:'50px'}}>
+     <Grid item xs={12}>
+     <TypographyText
+              Typography={<>360 Marketing </>}
+              fontWeight="bolder"
+              variant={isSmallScreen ?"h5":"h4"}
+              textAlign="centre"
+            />
+
+            <Grid
+              item
+              xs={12}
+              md={12}
+              lg={12}
+              sm={12}
+              sx={{ display: "flex", justifyContent: "center" }}
+            >
+              <DividerComp />
+            </Grid>
+          </Grid>
         {datas.map((data, index) => (
-          <Grid item xs={12} md={6} lg={4} sm={12}>
+          <Grid item xs={12} md={6} lg={3} sm={12}>
             <Card
               sx={{
                 backgroundImage: data.url,
@@ -304,7 +346,45 @@ const Index = () => {
             </Card>
           </Grid>
         ))}
-        
+              {/* *****************************section 5***************************** */}
+         <Grid item xs={12} md={12} lg={12} sm={12}>
+            <TypographyText
+              Typography={<>Get in Touch with us </>}
+              fontWeight="bolder"
+              variant={isSmallScreen ?"h5":"h4"}
+              textAlign="centre"
+            />
+
+            <Grid
+              item
+              xs={12}
+              md={12}
+              lg={12}
+              sm={12}
+              sx={{ display: "flex", justifyContent: "center" }}
+            >
+              <DividerComp />
+            </Grid>
+
+            <TypographyText
+              Typography={
+                <>
+               Partner with us to build your brand’s presence.
+                </>
+              }
+              fontWeight="bolder"
+              variant={"1.23rem"}
+              textAlign="centre"
+          /> <br/><br/>
+              <Buttons
+                Buttonname={"Read more"}
+                fontWeight="bolder"
+                color="#272974"
+                bgcolor="#F9CF37"
+                bgcolor1="red"
+                color1="white"
+              />
+          </Grid> 
       </Grid>
     </div>
   );
