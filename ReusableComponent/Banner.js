@@ -12,7 +12,7 @@ const Banner = (props) => {
     />
   ) : (
     data &&
-      data.map((curElem, index) => (
+      data?.map((curElem, index) => (
         <Grid
           item
           key={curElem?.banner_id}

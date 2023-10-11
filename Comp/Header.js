@@ -44,7 +44,7 @@ const Header = () => {
                     sx={{
                       color: "darkblue",
                       fontWeight: "600",
-
+                      fontFamily: "Lato",
                       fontSize: ".9rem",
                       textTransform: "capitalize",
                     }}

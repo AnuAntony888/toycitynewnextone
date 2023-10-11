@@ -30,15 +30,14 @@ const HomeSection2 = () => {
     {
       imageUrl: "/1.jpg",
     },
-    ];
-    const theme = useTheme();
-    const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
+  ];
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
   return (
-      <>
-          
-          <div className={styles.homepadding1}>
-               {/* *****************************section 4***************************** */}
-        <Grid container columnSpacing={{ xs: 1, sm: 1, md: 1 }} rowSpacing={1}>
+    <>
+      <div className={styles.homepadding1}>
+        {/* *****************************section 4***************************** */}
+        <Grid container columnSpacing={{ xs: 1, sm: 1, md: 1 }} rowSpacing={1} sx={{pt:'10px'}}>
           <Grid item xs={12} md={12} lg={12} sm={12}>
             <Banner
               data={data}
@@ -54,13 +53,20 @@ const HomeSection2 = () => {
                 xs: "46vw",
               }}
             />
-                  </Grid>
-                   {/* *****************************section 5***************************** */}
-          <Grid item xs={12} md={12} lg={12} sm={12}>
+          </Grid>
+          {/* *****************************section 5***************************** */}
+          <Grid
+            item
+            xs={12}
+            md={12}
+            lg={12}
+            sm={12}
+            sx={{ textAlign: "center" }}
+          >
             <TypographyText
               Typography={<>Brand Portfolio</>}
               fontWeight="bolder"
-              variant={isSmallScreen ?"h5":"h4"}
+              variant={isSmallScreen ? "h5" : "h4"}
               textAlign="centre"
             />
 
@@ -72,6 +78,7 @@ const HomeSection2 = () => {
               sm={12}
               sx={{ display: "flex", justifyContent: "center" }}
             >
+              {" "}
               <DividerComp />
             </Grid>
 
@@ -104,7 +111,7 @@ const HomeSection2 = () => {
         container
         columnSpacing={{ xs: 1, sm: 1, md: 1 }}
         rowSpacing={1}
-        sx={{ pt: "2%" }}
+        sx={{ pt: "2%" ,pb:'2%'}}
         className={styles.homepadding2}
       >
         {data1?.map((curElem) => (

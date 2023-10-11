@@ -1,4 +1,4 @@
-import { Card, CardContent, Grid } from "@mui/material";
+import { Button, Card, CardContent, Grid } from "@mui/material";
 import React from "react";
 import Banner from "../../../ReusableComponent/Banner";
 import { useTheme } from "@mui/material/styles";
@@ -20,9 +20,9 @@ const Index = () => {
       txt2: (
         <>
           ToyCity aims to be the leading and most efficient toy distribution
-          company in the MENA region. We are dedicated to delivering a wide range
-          of high-quality toys, fostering joy and igniting imagination in the
-          heart of children.
+          company in the MENA region. We are dedicated to delivering a wide
+          range of high-quality toys, fostering joy and igniting imagination in
+          the heart of children.
         </>
       ),
       button: "Read More",
@@ -33,9 +33,9 @@ const Index = () => {
       txt2: (
         <>
           ToyCity aims to be the leading and most efficient toy distribution
-          company in the MENA region. We are dedicated to delivering a wide range
-          of high-quality toys, fostering joy and igniting imagination in the
-          heart of children.
+          company in the MENA region. We are dedicated to delivering a wide
+          range of high-quality toys, fostering joy and igniting imagination in
+          the heart of children.
         </>
       ),
       button: "Read More",
@@ -46,9 +46,9 @@ const Index = () => {
       txt2: (
         <>
           ToyCity aims to be the leading and most efficient toy distribution
-          company in the MENA region. We are dedicated to delivering a wide range
-          of high-quality toys, fostering joy and igniting imagination in the
-          heart of children.
+          company in the MENA region. We are dedicated to delivering a wide
+          range of high-quality toys, fostering joy and igniting imagination in
+          the heart of children.
         </>
       ),
       button: "Read More",
@@ -59,16 +59,15 @@ const Index = () => {
       txt2: (
         <>
           ToyCity aims to be the leading and most efficient toy distribution
-          company in the MENA region. We are dedicated to delivering a wide range
-          of high-quality toys, fostering joy and igniting imagination in the
-          heart of children.
+          company in the MENA region. We are dedicated to delivering a wide
+          range of high-quality toys, fostering joy and igniting imagination in
+          the heart of children.
         </>
       ),
       button: "Read More",
     },
-   
   ];
-  
+
   return (
     <div>
       <Grid container columnSpacing={{ xs: 1, sm: 1, md: 1 }} rowSpacing={1}>
@@ -128,7 +127,7 @@ const Index = () => {
             }
           />
         </Grid>
-        <Grid item xs={12} md={6} lg={6} sm={12}>
+        <Grid item xs={12} md={6} lg={6} sm={12} sx={{ margin: "auto" }}>
           <img src="/homecontact.jpg" alt="about_section" width={"75%"} />
         </Grid>
         {/* *****************************section 2***************************** */}
@@ -231,8 +230,8 @@ const Index = () => {
         </Grid>
       </Grid>
       {/* *****************************section 2***************************** */}
-      <Grid container spacing={2} className={styles.homepadding1}>
-        <Grid item xs={12} md={12} lg={12} sm={12}>
+      <Grid container spacing={2} className={styles.homepadding1} >
+      
           <Banner
             data={data}
             className={styles.homeoffer1img}
@@ -247,7 +246,7 @@ const Index = () => {
               xs: "46vw",
             }}
           />
-        </Grid>
+       
       </Grid>
       <Grid container spacing={2} className={styles.homepadding}>
         <Grid item xs={12} md={12} lg={12} sm={12}>
@@ -257,16 +256,16 @@ const Index = () => {
             fontWeight="bolder"
             variant={isSmallScreen ? "h5" : "h4"}
           />
-              <Grid
-              item
-              xs={12}
-              md={12}
-              lg={12}
-              sm={12}
-              sx={{ display: "flex", justifyContent: "center" }}
-            >
-              <DividerComp />
-            </Grid>
+          <Grid
+            item
+            xs={12}
+            md={12}
+            lg={12}
+            sm={12}
+            sx={{ display: "flex", justifyContent: "center" }}
+          >
+            <DividerComp />
+          </Grid>
 
           <TypographyText
             textAlign="left"
@@ -283,10 +282,10 @@ const Index = () => {
                 <br />
                 Our dedicated team works diligently to ensure maximum brand
                 exposure in the market. We understand the importance of a strong
-                market presence, and thats why we prioritize your brands
-                safety and success. When you partner with us, you can rest
-                assured knowing that your brand is in capable hands. Together,
-                well embark on a journey to launch your brand with precision,
+                market presence, and thats why we prioritize your brands safety
+                and success. When you partner with us, you can rest assured
+                knowing that your brand is in capable hands. Together, well
+                embark on a journey to launch your brand with precision,
                 creativity, and unwavering commitment to achieving outstanding
                 results.
               </>
@@ -295,26 +294,31 @@ const Index = () => {
         </Grid>
       </Grid>
       {/* *****************************section 4***************************** */}
-      <Grid container spacing={2} className={styles.homepadding} sx={{paddingBottom:'50px'}}>
-     <Grid item xs={12}>
-     <TypographyText
-              Typography={<>360 Marketing </>}
-              fontWeight="bolder"
-              variant={isSmallScreen ?"h5":"h4"}
-              textAlign="centre"
-            />
+      <Grid
+        container
+        spacing={2}
+        className={styles.homepadding}
+        sx={{ paddingBottom: "50px" }}
+      >
+        <Grid item xs={12}>
+          <TypographyText
+            Typography={<>360 Marketing </>}
+            fontWeight="bolder"
+            variant={isSmallScreen ? "h5" : "h4"}
+            textAlign="centre"
+          />
 
-            <Grid
-              item
-              xs={12}
-              md={12}
-              lg={12}
-              sm={12}
-              sx={{ display: "flex", justifyContent: "center" }}
-            >
-              <DividerComp />
-            </Grid>
+          <Grid
+            item
+            xs={12}
+            md={12}
+            lg={12}
+            sm={12}
+            sx={{ display: "flex", justifyContent: "center" }}
+          >
+            <DividerComp />
           </Grid>
+        </Grid>
         {datas.map((data, index) => (
           <Grid item xs={12} md={6} lg={3} sm={12} key={index}>
             <Card
@@ -329,7 +333,7 @@ const Index = () => {
                   textAlign="centre"
                   Typography={data.txt}
                   fontWeight="bolder"
-                  variant={"h5"}
+                  variant={'1.48rem'}
                 />
                 <TypographyText textAlign="left" Typography={data.txt2} />
                 <br />
@@ -342,53 +346,51 @@ const Index = () => {
                   bgcolor1="red"
                   color1="white"
                 />
+              
               </CardContent>
             </Card>
           </Grid>
         ))}
-              {/* *****************************section 5***************************** */}
-         <Grid item xs={12} md={12} lg={12} sm={12}>
-            <TypographyText
-              Typography={<>Get in Touch with us </>}
-              fontWeight="bolder"
-              variant={isSmallScreen ?"h5":"h4"}
-              textAlign="centre"
-            />
-
-            <Grid
-              item
-              xs={12}
-              md={12}
-              lg={12}
-              sm={12}
-              sx={{ display: "flex", justifyContent: "center" }}
-            >
-              <DividerComp />
-            </Grid>
-
-            <TypographyText
-              Typography={
-                <>
-               Partner with us to build your brand’s presence.
-                </>
-              }
-              fontWeight="bolder"
-              variant={"1.23rem"}
-              textAlign="centre"
-          /> <br/><br/>
-              <Buttons
-                Buttonname={"Read more"}
-                fontWeight="bolder"
-                color="#272974"
-                bgcolor="#F9CF37"
-                bgcolor1="red"
-                color1="white"
-              />
-          </Grid> 
+        {/* *****************************section 5***************************** */}
+        <Grid item xs={12} md={12} lg={12} sm={12}>
+        
+          <TypographyText
+            Typography={<>Get in Touch with us </>}
+            fontWeight="bolder"
+            variant={isSmallScreen ? "h5" : "h4"}
+            textAlign="centre"
+          />
+          <Grid
+            item
+            xs={12}
+            md={12}
+            lg={12}
+            sm={12}
+            sx={{ display: "flex", justifyContent: "center" }}
+          >
+            <DividerComp />
+          </Grid>
+          <TypographyText
+            Typography={<>Partner with us to build your brand’s presence.</>}
+            fontWeight="bolder"
+            variant={"1.23rem"}
+            textAlign="centre"
+          />{" "}
+          <br />
+          <br />
+          <Buttons
+            Buttonname={"Read more"}
+            fontWeight="bolder"
+            color="#272974"
+            bgcolor="#F9CF37"
+            bgcolor1="red"
+            color1="white"
+          />
+          
+        </Grid>
       </Grid>
     </div>
   );
 };
 
 export default Index;
-

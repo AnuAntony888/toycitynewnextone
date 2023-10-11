@@ -1,12 +1,15 @@
 .homepadding {
   padding-left: 5%;
   padding-right: 5%;
-  padding-top: 50px;
+  padding-top: 0px;
 }
-.homepadding1 {padding-top: 50px;}
+.homepadding1 {
+  padding-top: 20px;
+}
 .homepadding2 {
   padding-left: 5%;
-  padding-right: 5%;}
+  padding-right: 5%;
+}
 .homeoffer1img {
   height: 100%;
   width: 100%;
@@ -15,9 +18,8 @@
   width: 100px;
   height: 5px;
   background: red;
-  margin-top: 3%;
-  margin-bottom: 3%;
-
+  /* margin-top: 3%;
+  margin-bottom: 3%; */
 }
 .avatarContainer {
   background-color: darkgreen !important;
@@ -30,7 +32,7 @@
 }
 .flbrandtxt1 {
   font-size: 0.9rem;
-font-weight: 600;
+  font-weight: 600;
   width: 100%;
   text-align: left;
 }

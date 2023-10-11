@@ -29,7 +29,9 @@ export function TypographyText(props) {
       variant={props.variant}
       component={props.component}
       className={props.className}
-      fontFamily="'Libre Baskerville', serif"
+    fontFamily='Lato'
+      // font-family= 'Young Serif'
+
     >
       {props.Typography}
     </Typography>
@@ -51,7 +53,7 @@ export function Buttons(props) {
         fontWeight: props.fontWeight,
         marginBottom: props.marginBottom,
         transform: props.transform,
-
+        fontFamily:'Lato',
         ":hover": {
           bgcolor: props.bgcolor1, // theme.palette.primary.main
           color: props.color1,
@@ -92,7 +94,11 @@ export function DividerComp(props) {
   return (
     <div
       className={styles.sep}
-      style={{ margin: props.divmargin, marginTop: "1%", marginBottom: "2%" }}
+      style={{
+        margin: props.divmargin,
+        // marginTop: "1%",
+        marginBottom: "1%"
+      }}
     ></div>
   );
 }

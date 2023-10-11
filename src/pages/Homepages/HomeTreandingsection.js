@@ -31,7 +31,7 @@ const HomeTreandingsection = () => {
   return (
     <div className={styles.homepadding}>
        {/* *****************************section 3***************************** */}
-      <Grid container spacing={2}>
+      <Grid container spacing={2} >
         <Grid item xs={12} md={12} lg={12} sm={12}>
           <TypographyText
             Typography={<>Treanding</>}
@@ -59,7 +59,7 @@ const HomeTreandingsection = () => {
           />
         </Grid>
         {data?.map((curElem) => (
-          <Grid item xs={6} lg={3} md={3} sm={4} key={curElem.index}>
+          <Grid item xs={6} lg={3} md={3} sm={4} key={curElem.index} >
             <Card
               sx={{
                 backgroundColor: "transparent",
