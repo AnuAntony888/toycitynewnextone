@@ -1,4 +1,11 @@
-import { Box, Card, CardContent, CardHeader, CardMedia, Skeleton } from "@mui/material";
+import {
+  Box,
+  Card,
+  CardContent,
+  CardHeader,
+  CardMedia,
+  Skeleton,
+} from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import React from "react";
 import { Grid } from "@mui/material";
@@ -30,13 +37,13 @@ const HomeTreandingsection = () => {
 
   return (
     <div className={styles.homepadding}>
-       {/* *****************************section 3***************************** */}
-      <Grid container spacing={2} >
+      {/* *****************************section 3***************************** */}
+      <Grid container spacing={2}>
         <Grid item xs={12} md={12} lg={12} sm={12}>
           <TypographyText
             Typography={<>Treanding</>}
             fontWeight="bolder"
-            variant={isSmallScreen ?"h5":"h4"}
+            variant={isSmallScreen ? "h5" : "h4"}
             textAlign="centre"
           />
 
@@ -59,7 +66,7 @@ const HomeTreandingsection = () => {
           />
         </Grid>
         {data?.map((curElem) => (
-          <Grid item xs={6} lg={3} md={3} sm={4} key={curElem.index} >
+          <Grid item xs={6} lg={3} md={3} sm={4} key={curElem.index}>
             <Card
               sx={{
                 backgroundColor: "transparent",
