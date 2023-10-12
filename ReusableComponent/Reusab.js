@@ -22,6 +22,7 @@ export function TypographyText(props) {
         fontWeight: props.fontWeight,
         transform: props.transform,
         margin: props.margin,
+        marginTop:props.marginTop,
         "&:hover": {
           color: props.hovercolor,
         },

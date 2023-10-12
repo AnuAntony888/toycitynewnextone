@@ -23,7 +23,7 @@ const Header = () => {
         sx={{
           backgroundColor: "transparent",
           width: "100%",
-
+height:'90px',
           justifyContent: "space-between",
           position: "relative",
         }}
@@ -33,9 +33,10 @@ const Header = () => {
             <>
               <img
                 src={"/logo_new.png"}
-                width={150}
+                width={130}
                 height={"auto"}
                 onClick={refreshPage}
+                style={{marginTop:'10px'}}
               />
               <Box>
                 {navItems.map((item) => (
@@ -47,6 +48,8 @@ const Header = () => {
                       fontFamily: "Lato",
                       fontSize: ".9rem",
                       textTransform: "capitalize",
+                      marginTop: '40px',
+                      minWidth:'85px'
                     }}
                   >
                     {item}
@@ -58,7 +61,7 @@ const Header = () => {
             <>
               <img
                 src={"/logo_new.png"}
-                width={150}
+                width={130}
                 height={"auto"}
                 onClick={refreshPage}
               />
@@ -78,6 +81,6 @@ export const navItems = [
   <Link href={"/Aboutus"}>About Us</Link>,
   <Link href={"/Brands"}>Brands</Link>,
   <Link href={"/Partners"}>Partners</Link>,
-  <Link href={"/newsandevents"}>News and events</Link>,
+  <Link href={"/NewsandEvents"}>News and events</Link>,
   <Link href={"/Contact"}>Contact</Link>,
 ];

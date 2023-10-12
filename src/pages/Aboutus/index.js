@@ -67,10 +67,49 @@ const Index = () => {
       button: "Read More",
     },
   ];
-
+  const vissionmission = [
+    {
+      backgroundImage: "url(/vission.jpg)",
+      txt1: "Our Mission",
+      txt2: (
+        <>
+          Our mission is to meticulously source, develop and market a diverse
+          range of children’s products. We are dedicated to offering high
+          quality toys and educational material that kindle creativity, enhance
+          motor skills, stimulate imagination and foster a genuine love for
+          learning in every child. Our focus is on carefully curating our
+          selection to enrich the lives of our consumers while ensuring that the
+          element of fun is never compromised. We strive to become go-to-choice
+          for parents, caregivers, guardians and educators in the Mena region,
+          trusted for our unwavering focus on safety, quality and innovation.
+          Join us in creating a world where children can thrive, explore, and
+          grow through the transformative power of play.
+        </>
+      ),
+    },
+    {
+      backgroundImage: "url(/mission.jpg)",
+      txt1: "Our Vission",
+      txt2: (
+        <>
+          ToyCity aims to be the leading and most efficient toy distribution
+          company in the MENA region. We are dedicated to delivering a wide
+          range of high-quality toys, fostering joy and igniting imagination in
+          the heart of children. Through our commitment to excellence, we strive
+          to provide unparalleled service to our valued business partners and
+          customers, ensuring their success and satisfaction. We aim to optimize
+          efficiency in every aspect of our operations by leveraging
+          cutting-edge logistics, innovative technologies and a passionate team
+          of employees. Together with our partners, we aspire to shape the toy
+          industry, bringing delight and happiness to every child in the MENA
+          region.
+        </>
+      ),
+    },
+  ];
   return (
     <div>
-      <Grid container columnSpacing={{ xs: 1, sm: 1, md: 1 }} rowSpacing={1}>
+      <Grid container spacing={5}>
         <Banner
           data={data}
           className={styles.homeoffer1img}
@@ -86,7 +125,7 @@ const Index = () => {
           }}
         />
       </Grid>
-      <Grid container spacing={2} className={styles.homepadding}>
+      <Grid container spacing={5} className={styles.homepadding}>
         <Grid item xs={12} md={6} lg={6} sm={12}>
           <TypographyText
             Typography={<>Who We Are</>}
@@ -97,6 +136,7 @@ const Index = () => {
           <DividerComp />
           <TypographyText
             textAlign="left"
+            marginTop='10px'
             Typography={
               <>
                 We do more than simply ‘sell’ your inventory to merchants. As a
@@ -130,123 +170,58 @@ const Index = () => {
         <Grid item xs={12} md={6} lg={6} sm={12} sx={{ margin: "auto" }}>
           <img src="/homecontact.jpg" alt="about_section" width={"75%"} />
         </Grid>
-        {/* *****************************section 2***************************** */}
-        <Grid item xs={12} md={6} lg={6} sm={12}>
-          <Card
-            sx={{
-              backgroundImage: "url(/vission.jpg)",
-              backgroundSize: "cover",
-              p: "2%",
-            }}
-          >
-            <CardContent>
-              <TypographyText
-                textAlign="centre"
-                Typography={<>Our Mission</>}
-                fontWeight="bolder"
-                variant={"h5"}
-              />
-
-              <TypographyText
-                textAlign="left"
-                Typography={
-                  <>
-                    Our mission is to meticulously source, develop and market a
-                    diverse range of children’s products. We are dedicated to
-                    offering high quality toys and educational material that
-                    kindle creativity, enhance motor skills, stimulate
-                    imagination and foster a genuine love for learning in every
-                    child. Our focus is on carefully curating our selection to
-                    enrich the lives of our consumers while ensuring that the
-                    element of fun is never compromised. We strive to become
-                    go-to-choice for parents, caregivers, guardians and
-                    educators in the Mena region, trusted for our unwavering
-                    focus on safety, quality and innovation. Join us in creating
-                    a world where children can thrive, explore, and grow through
-                    the transformative power of play.
-                  </>
-                }
-              />
-              <br />
-              <br />
-              <Buttons
-                Buttonname={"Read more"}
-                fontWeight="bolder"
-                color="#272974"
-                bgcolor="#F9CF37"
-                bgcolor1="red"
-                color1="white"
-              />
-            </CardContent>
-          </Card>
-        </Grid>
-        <Grid item xs={12} md={6} lg={6} sm={12}>
-          <Card
-            sx={{
-              backgroundImage: "url(/mission.jpg)",
-              backgroundSize: "cover",
-              p: "2%",
-            }}
-          >
-            <CardContent>
-              <TypographyText
-                textAlign="centre"
-                Typography={<>Our Vission</>}
-                fontWeight="bolder"
-                variant={"h5"}
-              />
-
-              <TypographyText
-                textAlign="left"
-                Typography={
-                  <>
-                    ToyCity aims to be the leading and most efficient toy
-                    distribution company in the MENA region. We are dedicated to
-                    delivering a wide range of high-quality toys, fostering joy
-                    and igniting imagination in the heart of children. Through
-                    our commitment to excellence, we strive to provide
-                    unparalleled service to our valued business partners and
-                    customers, ensuring their success and satisfaction. We aim
-                    to optimize efficiency in every aspect of our operations by
-                    leveraging cutting-edge logistics, innovative technologies
-                    and a passionate team of employees. Together with our
-                    partners, we aspire to shape the toy industry, bringing
-                    delight and happiness to every child in the MENA region.
-                  </>
-                }
-              />
-              <br />
-              <br />
-              <Buttons
-                Buttonname={"Read more"}
-                fontWeight="bolder"
-                color="#272974"
-                bgcolor="#F9CF37"
-                bgcolor1="red"
-                color1="white"
-              />
-            </CardContent>
-          </Card>
-        </Grid>
       </Grid>
       {/* *****************************section 2***************************** */}
-      <Grid container spacing={2} className={styles.homepadding1} >
-      
-          <Banner
-            data={data}
-            className={styles.homeoffer1img}
-            lg={12}
-            md={12}
-            sm={12}
-            xs={12}
-            height={{
-              lg: "21vw",
-              md: "20vw",
-              sm: "20vw",
-              xs: "46vw",
-            }}
-          />
-       
+
+      <Grid container spacing={2} className={styles.homepadding}>
+        {vissionmission.map((data, index) => (
+          <Grid item xs={12} md={6} lg={6} sm={12} key={index}>
+            <CardContent
+              sx={{
+                backgroundImage: data.backgroundImage,
+                backgroundSize: "cover",
+                p: "10px",borderRadius:'15px'
+              }}
+            >
+              <TypographyText
+                textAlign="centre"
+                Typography={data.txt1}
+                fontWeight="bolder"
+                variant={"h5"}
+              />
+              <br />
+              <TypographyText textAlign="left" Typography={data.txt2} />
+
+              <br />
+              <Buttons
+                Buttonname={"Read more"}
+                fontWeight="bolder"
+                color="#272974"
+                bgcolor="#F9CF37"
+                bgcolor1="red"
+                color1="white"
+              />
+            </CardContent>
+          </Grid>
+        ))}
+      </Grid>
+      {/* *****************************section 2***************************** */}
+      <Grid container spacing={2} className={styles.homepadding} sx={{pt:'30px'}}>
+        <Banner
+          data={data}
+          className={styles.homeoffer1img}
+          lg={12}
+          md={12}
+          sm={12}
+          xs={12}
+          height={{
+            lg: "21vw",
+            md: "20vw",
+            sm: "20vw",
+            xs: "46vw",
+          }}
+          style={{ borderRadius: "25px" }}
+        />
       </Grid>
       <Grid container spacing={2} className={styles.homepadding}>
         <Grid item xs={12} md={12} lg={12} sm={12}>
@@ -269,6 +244,7 @@ const Index = () => {
 
           <TypographyText
             textAlign="left"
+            marginTop='10px'
             Typography={
               <>
                 At ToyCity, we specialize in crafting comprehensive marketing
@@ -333,7 +309,7 @@ const Index = () => {
                   textAlign="centre"
                   Typography={data.txt}
                   fontWeight="bolder"
-                  variant={'1.48rem'}
+                  variant={"1.48rem"}
                 />
                 <TypographyText textAlign="left" Typography={data.txt2} />
                 <br />
@@ -346,14 +322,12 @@ const Index = () => {
                   bgcolor1="red"
                   color1="white"
                 />
-              
               </CardContent>
             </Card>
           </Grid>
         ))}
         {/* *****************************section 5***************************** */}
         <Grid item xs={12} md={12} lg={12} sm={12}>
-        
           <TypographyText
             Typography={<>Get in Touch with us </>}
             fontWeight="bolder"
@@ -386,7 +360,6 @@ const Index = () => {
             bgcolor1="red"
             color1="white"
           />
-          
         </Grid>
       </Grid>
     </div>

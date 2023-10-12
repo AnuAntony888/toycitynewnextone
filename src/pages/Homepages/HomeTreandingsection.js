@@ -38,7 +38,11 @@ const HomeTreandingsection = () => {
   return (
     <div className={styles.homepadding}>
       {/* *****************************section 3***************************** */}
-      <Grid container spacing={2}>
+      <Grid
+        container
+        spacing={2}
+        sx={{ paddingTop: isSmallScreen ? "0px" : "25px" }}
+      >
         <Grid item xs={12} md={12} lg={12} sm={12}>
           <TypographyText
             Typography={<>Treanding</>}
@@ -71,20 +75,8 @@ const HomeTreandingsection = () => {
               sx={{
                 backgroundColor: "transparent",
                 boxShadow: "none",
-                "& .imag_card": {
-                  zIndex: "-2000",
-                  transition: "transform .3s, filter 1.5s ease-in-out",
-                },
               }}
             >
-              <CardHeader
-                sx={{ pt: "0px", pb: "5px", pl: "0px" }}
-                avatar={
-                  <Avatar variant="rounded" className={styles.avatarContainer}>
-                    100%
-                  </Avatar>
-                }
-              />
               <Box>
                 <Box
                   sx={{
@@ -98,9 +90,8 @@ const HomeTreandingsection = () => {
                       component="img"
                       image={curElem.imageUrl}
                       sx={{
-                        // margin: "auto",
                         height: "250px",
-                        // objectFit: "contain",
+                        borderRadius: "25px",
                       }}
                       width={"100%"}
                       alt={""}

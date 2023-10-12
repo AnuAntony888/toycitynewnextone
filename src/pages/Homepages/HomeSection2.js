@@ -11,33 +11,29 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 const HomeSection2 = () => {
   const data = ["/banner2.jpg"];
+
   const data1 = [
-    {
-      imageUrl: "/1.jpg",
-    },
-    {
-      imageUrl: "/1.jpg",
-    },
-    {
-      imageUrl: "/1.jpg",
-    },
-    {
-      imageUrl: "/1.jpg",
-    },
-    {
-      imageUrl: "/1.jpg",
-    },
-    {
-      imageUrl: "/1.jpg",
-    },
+    { img: "/shopify-offers.png" },
+    { img: "/shopify-offers.png" },
+    { img: "/shopify-offers.png" },
+    { img: "/shopify-offers.png" },
+    { img: "/shopify-offers.png" },
+    { img: "/shopify-offers.png" },
+    { img: "/shopify-offers.png" },
+    { img: "/shopify-offers.png" },
   ];
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <>
-      <div className={styles.homepadding1}>
+      <div className={styles.homepadding}>
         {/* *****************************section 4***************************** */}
-        <Grid container columnSpacing={{ xs: 1, sm: 1, md: 1 }} rowSpacing={1} sx={{pt:'10px'}}>
+        <Grid
+          container
+          columnSpacing={{ xs: 1, sm: 1, md: 1 }}
+          rowSpacing={1}
+          sx={{ pt: "30px" }}
+        >
           <Grid item xs={12} md={12} lg={12} sm={12}>
             <Banner
               data={data}
@@ -52,6 +48,7 @@ const HomeSection2 = () => {
                 sm: "20vw",
                 xs: "46vw",
               }}
+              style={{ borderRadius: "25px" }}
             />
           </Grid>
           {/* *****************************section 5***************************** */}
@@ -61,13 +58,14 @@ const HomeSection2 = () => {
             md={12}
             lg={12}
             sm={12}
-            sx={{ textAlign: "center" }}
+            sx={{ textAlign: "center" ,marginTop:'25px' }}
           >
             <TypographyText
               Typography={<>Brand Portfolio</>}
               fontWeight="bolder"
               variant={isSmallScreen ? "h5" : "h4"}
               textAlign="centre"
+    
             />
 
             <Grid
@@ -78,7 +76,6 @@ const HomeSection2 = () => {
               sm={12}
               sx={{ display: "flex", justifyContent: "center" }}
             >
-              {" "}
               <DividerComp />
             </Grid>
 
@@ -111,19 +108,20 @@ const HomeSection2 = () => {
         container
         columnSpacing={{ xs: 1, sm: 1, md: 1 }}
         rowSpacing={1}
-        sx={{ pt: "2%" ,pb:'2%'}}
+        sx={{ pt: "2%", pb: "2%" }}
         className={styles.homepadding2}
       >
-        {data1?.map((curElem) => (
-          <Grid item xs={6} lg={2} md={3} sm={4} key={curElem.index}>
-            {curElem.imageUrl ? (
+        {data1?.map((curElem,index) => (
+                <Grid item xs={4} md={2.4} lg={1.5} sm={3} key={index}>
+            {curElem.img ? (
               // Render an image if curElem.imageUrl is available
               <CardMedia
                 component="img"
-                image={curElem.imageUrl}
+                image={curElem.img}
                 width={"100%"}
                 alt={""}
                 className="image-card"
+                sx={{ borderRadius: "25px" }}
               />
             ) : (
               // Render a placeholder (skeleton) if curElem.imageUrl is not available

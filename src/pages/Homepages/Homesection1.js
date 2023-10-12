@@ -26,7 +26,7 @@ const Homesection1 = () => {
     infinite: true,
 
     autoplay: true, // Enable autoplay
-    autoplaySpeed: 500,
+    autoplaySpeed: 1400,
   };
   return (
     <>
@@ -111,7 +111,7 @@ const Homesection1 = () => {
 
       {/* *****************************section 2***************************** */}
       <div className={styles.homepadding2}>
-        <Grid container spacing={2}>
+        <Grid container spacing={2} sx={{paddingTop:isSmallScreen ?'0px':'25px'}}>
           <Grid item xs={12} md={6} lg={6} sm={12}>
             <TypographyText
               Typography={<>About Us</>}
@@ -123,7 +123,7 @@ const Homesection1 = () => {
             <DividerComp />
             <TypographyText
               textAlign="left"
-          
+              marginTop='10px'
               Typography={
                 <>
                   Toy City is a one-stop shop for the world of toy distribution.

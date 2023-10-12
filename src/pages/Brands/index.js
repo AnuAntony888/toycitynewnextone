@@ -51,7 +51,7 @@ const Index = () => {
         container
         spacing={2}
         className={styles.homepadding2}
-        sx={{ paddingBottom: "50px" }}
+        sx={{ paddingBottom: "50px" ,pt:'20px'}}
       >
         <Grid item xs={12} md={12} lg={12} sm={12}>
           <TypographyText 
@@ -79,7 +79,7 @@ const Index = () => {
             Typography={<>Toys</>}
             fontWeight="bolder"
             variant={"h6"}
-            textAlign="left"
+            textAlign="centre"
           />
         </Grid>
         {datas.map((item, index) => (
@@ -89,7 +89,7 @@ const Index = () => {
               image={item.img}
               alt="brand_image"
               width={"100%"}
-              sx={{ borderRadius: "30%" }}
+              sx={{ borderRadius: "30px" }}
             />
           </Grid>
         ))}
@@ -99,7 +99,7 @@ const Index = () => {
             Typography={<>Toys</>}
             fontWeight="bolder"
             variant={"h6"}
-            textAlign="left"
+            textAlign="centre"
           />
         </Grid>
         {datas.map((item, index) => (
@@ -109,7 +109,7 @@ const Index = () => {
               image={item.img}
               alt="brand_image"
               width={"100%"}
-              sx={{ borderRadius: "30%" }}
+              sx={{ borderRadius: "30px" }}
             />
           </Grid>
         ))}
@@ -118,7 +118,7 @@ const Index = () => {
             Typography={<>Play Cosmetics</>}
             fontWeight="bolder"
             variant={"h6"}
-            textAlign="left"
+            textAlign="centre"
           />
         </Grid>
         {datas.map((item, index) => (
@@ -128,7 +128,7 @@ const Index = () => {
               image={item.img}
               alt="brand_image"
               width={"100%"}
-              sx={{ borderRadius: "30%" }}
+              sx={{ borderRadius: "30px" }}
             />
           </Grid>
         ))}

@@ -25,6 +25,7 @@ const Homesection3 = () => {
           <DividerComp />
           <TypographyText
             textAlign="left"
+            marginTop='10px'
             Typography={
               <>
                 Toy City is a one-stop shop for the world of toy distribution.
