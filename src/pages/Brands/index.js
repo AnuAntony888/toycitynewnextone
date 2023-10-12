@@ -1,16 +1,17 @@
-import React from "react";
-import Banner from "../../../ReusableComponent/Banner";
-import { CardMedia, Grid,  } from "@mui/material";
-import {
-  Buttons,
-  DividerComp,
-  TypographyText,
-} from "../../../ReusableComponent/Reusab";
-import { useTheme } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import styles from "../../styles/Home.module.css";
 
-const index = () => {
+
+import React from "react";
+
+import { CardMedia, Grid,  } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
+import styles from "../../styles/Home.module.css";
+import Banner from "../../../ReusableComponent/Banner";
+import { DividerComp, TypographyText } from "../../../ReusableComponent/Reusab";
+
+
+
+const Index = () => {
   const data = ["/brandbanner.jpeg"];
   const datas = [
     { img: "/shopify-offers.png" },
@@ -53,7 +54,7 @@ const index = () => {
         sx={{ paddingBottom: "50px" }}
       >
         <Grid item xs={12} md={12} lg={12} sm={12}>
-          <TypographyText
+          <TypographyText 
             Typography={<>Brand Portfolio</>}
             fontWeight="bolder"
             variant={isSmallScreen ? "h5" : "h4"}
@@ -136,4 +137,5 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
+
