@@ -83,4 +83,5 @@ export const navItems = [
   <Link href={"/Partners"}>Partners</Link>,
   <Link href={"/NewsandEvents"}>News and events</Link>,
   <Link href={"/Contact"}>Contact</Link>,
+ 
 ];

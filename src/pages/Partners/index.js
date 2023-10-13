@@ -4,7 +4,7 @@ import { DividerComp, TypographyText } from "../../../ReusableComponent/Reusab";
 import styles from "../../styles/Home.module.css";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
-const index = () => {
+const Index = () => {
   const datas = [
     { img: "/shopify-offers.png" },
     { img: "/shopify-offers.png" },
@@ -160,7 +160,7 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
 const Data = [
   {
     text: (
