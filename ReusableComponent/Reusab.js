@@ -55,6 +55,7 @@ export function Buttons(props) {
         fontWeight: props.fontWeight,
         marginBottom: props.marginBottom,
         transform: props.transform,
+  minWidth:'100px',
         // fontFamily: 'Lato',
         fontFamily:'Rubik',
         ":hover": {

@@ -6,7 +6,7 @@ import Homesection3 from './Homesection3'
 
 
 const Homecontent = () => {
-  return (<>
+  return (<div >
     
     <Homesection1 />
     <HomeTreandingsection />
@@ -14,7 +14,7 @@ const Homecontent = () => {
     <Homesection3/>
 
     
-  </>)
+  </div>)
 }
 
 export default Homecontent

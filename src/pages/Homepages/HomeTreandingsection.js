@@ -51,7 +51,7 @@ const HomeTreandingsection = () => {
             textAlign="centre"
           />
 
-          <Grid
+          {/* <Grid
             item
             xs={12}
             md={12}
@@ -59,14 +59,14 @@ const HomeTreandingsection = () => {
             sm={12}
             sx={{ display: "flex", justifyContent: "center" }}
           >
-            {/* <DividerComp /> */}
-          </Grid>
+            <DividerComp />
+          </Grid> */}
 
           <TypographyText
-            Typography={<>Check out our most trending products for fall 2023</>}
-            // fontWeight=""
-            variant={"1rem"}
-            textAlign="centre"
+            Typography={<>Check out our most trending products for fall 2023
+            <br/></>}
+            marginTop="10px"
+
           />
         </Grid>
         {data?.map((curElem) => (

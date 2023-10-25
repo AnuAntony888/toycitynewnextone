@@ -21,7 +21,8 @@ const Header = () => {
     <>
       <AppBar
         sx={{
-          backgroundColor: "transparent",
+          // backgroundColor: "transparent",
+          backgroundColor:' #ebebeb',
           width: "100%",
 height:'90px',
           justifyContent: "space-between",
