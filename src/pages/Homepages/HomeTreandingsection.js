@@ -47,7 +47,7 @@ const HomeTreandingsection = () => {
           <TypographyText
             Typography={<>Treanding</>}
             fontWeight="bolder"
-            variant={isSmallScreen ? "h5" : "h4"}
+            variant={ "h5" }
             textAlign="centre"
           />
 
@@ -59,13 +59,13 @@ const HomeTreandingsection = () => {
             sm={12}
             sx={{ display: "flex", justifyContent: "center" }}
           >
-            <DividerComp />
+            {/* <DividerComp /> */}
           </Grid>
 
           <TypographyText
             Typography={<>Check out our most trending products for fall 2023</>}
-            fontWeight="bolder"
-            variant={"1.23rem"}
+            // fontWeight=""
+            variant={"1rem"}
             textAlign="centre"
           />
         </Grid>

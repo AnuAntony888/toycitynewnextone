@@ -15,14 +15,14 @@ const Homesection3 = () => {
     <div className={styles.homepadding}>
       {/* *****************************section 6***************************** */}
       <Grid container spacing={2} sx={{ paddingBottom: "30px" }}>
-        <Grid item xs={12} md={6} lg={6} sm={12}>
+        <Grid item xs={12} md={7} lg={7} sm={12} sx={{margin:'auto'}}>
           <TypographyText
             Typography={<>Want to know more?</>}
             fontWeight="bolder"
-            variant={isSmallScreen ? "h5" : "h4"}
+            variant={"h5"}
             textAlign="left"
           />
-          <DividerComp />
+     
           <TypographyText
             textAlign="left"
             marginTop='10px'
@@ -51,8 +51,8 @@ const Homesection3 = () => {
             color1="white"
           />
         </Grid>
-        <Grid item xs={12} md={6} lg={6} sm={12}>
-          <img src="/homecontact.jpg" alt="about_section" width={"75%"} />
+        <Grid item xs={12} md={5} lg={5} sm={12}>
+          <img src="/homecontact.jpg" alt="about_section" width={"100%"} />
         </Grid>
       </Grid>
     </div>

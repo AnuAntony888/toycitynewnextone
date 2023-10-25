@@ -111,19 +111,22 @@ const Homesection1 = () => {
 
       {/* *****************************section 2***************************** */}
       <div className={styles.homepadding2}>
-        <Grid container spacing={2} sx={{paddingTop:isSmallScreen ?'0px':'25px'}}>
-          <Grid item xs={12} md={6} lg={6} sm={12}>
+        <Grid
+          container
+          spacing={2}
+          sx={{ paddingTop: isSmallScreen ? "0px" : "25px" }}
+        >
+          <Grid item xs={12} md={7} lg={7} sm={12}>
             <TypographyText
               Typography={<>About Us</>}
               fontWeight="bolder"
-              variant={isSmallScreen ? "h5" : "h4"}
+              variant={"h5"}
               textAlign="left"
-    
             />
-            <DividerComp />
+
             <TypographyText
               textAlign="left"
-              marginTop='10px'
+              marginTop="10px"
               Typography={
                 <>
                   Toy City is a one-stop shop for the world of toy distribution.
@@ -149,16 +152,20 @@ const Homesection1 = () => {
               }
             />
             <Buttons
-              Buttonname={"Read more"}
-              fontWeight="bolder"
-              color="#272974"
-              bgcolor="#F9CF37"
+              Buttonname={"Read more"}hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+              // fontWeight="bolder"hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+               color="#272974"
+              bgcolor="#FFBC00"
               bgcolor1="red"
               color1="white"
             />
           </Grid>
-          <Grid item xs={12} md={6} lg={6} sm={12} sx={{margin :'auto'}}>
-            <img src="/About-Us_vector.png" alt="about_section" width={"75%"} />
+          <Grid item xs={12} md={5} lg={5} sm={12} sx={{ margin: "auto" }}>
+            <img
+              src="/About-Us_vector.png"
+              alt="about_section"
+              width={"100%"}
+            />
           </Grid>
         </Grid>
       </div>

@@ -44,8 +44,9 @@ height:'90px',
                     key={item}
                     sx={{
                       color: "darkblue",
-                      fontWeight: "600",
-                      fontFamily: "Lato",
+                       fontWeight: "500",
+                      // fontFamily: "Lato",
+                      fontFamily:'Rubik',
                       fontSize: ".9rem",
                       textTransform: "capitalize",
                       marginTop: '40px',

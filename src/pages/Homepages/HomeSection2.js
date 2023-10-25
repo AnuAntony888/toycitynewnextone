@@ -58,40 +58,25 @@ const HomeSection2 = () => {
             md={12}
             lg={12}
             sm={12}
-            sx={{ textAlign: "center" ,marginTop:'25px' }}
+            sx={{ textAlign: "center", marginTop: "25px" }}
           >
             <TypographyText
               Typography={<>Brand Portfolio</>}
               fontWeight="bolder"
-              variant={isSmallScreen ? "h5" : "h4"}
+              variant={"h5"}
               textAlign="centre"
-    
             />
 
-            <Grid
-              item
-              xs={12}
-              md={12}
-              lg={12}
-              sm={12}
-              sx={{ display: "flex", justifyContent: "center" }}
-            >
-              <DividerComp />
-            </Grid>
-
             <TypographyText
+              marginTop="10px"
               Typography={
                 <>
                   Our brand portfolio includes wide range of products which
                   covers all categories suitable for different age groups
+                  <br />
                 </>
               }
-              fontWeight="bolder"
-              variant={"1.23rem"}
-              textAlign="centre"
             />
-          </Grid>
-          <Grid item xs={12} md={12} lg={12} sm={12}>
             <Buttons
               Buttonname={"Get in Touch"}
               fontWeight="bolder"
@@ -111,8 +96,8 @@ const HomeSection2 = () => {
         sx={{ pt: "2%", pb: "2%" }}
         className={styles.homepadding2}
       >
-        {data1?.map((curElem,index) => (
-                <Grid item xs={4} md={2.4} lg={1.5} sm={3} key={index}>
+        {data1?.map((curElem, index) => (
+          <Grid item xs={4} md={2.4} lg={1.5} sm={3} key={index}>
             {curElem.img ? (
               // Render an image if curElem.imageUrl is available
               <CardMedia

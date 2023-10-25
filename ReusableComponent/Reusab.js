@@ -30,7 +30,8 @@ export function TypographyText(props) {
       variant={props.variant}
       component={props.component}
       className={props.className}
-    fontFamily='Lato'
+      // fontFamily='Lato'
+      fontFamily='Rubik'
       // font-family= 'Young Serif'
 
     >
@@ -54,7 +55,8 @@ export function Buttons(props) {
         fontWeight: props.fontWeight,
         marginBottom: props.marginBottom,
         transform: props.transform,
-        fontFamily:'Lato',
+        // fontFamily: 'Lato',
+        fontFamily:'Rubik',
         ":hover": {
           bgcolor: props.bgcolor1, // theme.palette.primary.main
           color: props.color1,
