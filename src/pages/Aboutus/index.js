@@ -125,18 +125,23 @@ const Index = () => {
           }}
         />
       </Grid>
-      <Grid container spacing={5} className={styles.homepadding}>
+      <Grid
+        container
+        spacing={2}
+        sx={{ mt: ".5px" }}
+        className={`${styles.homepadding1}, ${styles.homepadding}`}
+      >
         <Grid item xs={12} md={6} lg={6} sm={12}>
           <TypographyText
             Typography={<>Who We Are</>}
             fontWeight="bolder"
-            variant={isSmallScreen ? "h5" : "h4"}
+            variant={"h5"}
             textAlign="left"
           />
-          <DividerComp />
+
           <TypographyText
             textAlign="left"
-            marginTop='10px'
+            marginTop="10px"
             Typography={
               <>
                 We do more than simply ‘sell’ your inventory to merchants. As a
@@ -167,20 +172,39 @@ const Index = () => {
             }
           />
         </Grid>
-        <Grid item xs={12} md={6} lg={6} sm={12} sx={{ margin: "auto" }}>
-          <img src="/homecontact.jpg" alt="about_section" width={"75%"} />
+        <Grid
+          item
+          xs={12}
+          md={6}
+          lg={6}
+          sm={12}
+          height={{
+            lg: "45vw",
+            md: "60vw",
+          }}
+          sx={{ margin: "auto" }}
+        >
+          <img
+            alt="toysbanner"
+            src="/who2.jpg"
+            width="100%"
+            className={styles.homeoffer1img}
+            style={{ borderRadius: "30px" }}
+          />
         </Grid>
       </Grid>
       {/* *****************************section 2***************************** */}
 
-      <Grid container spacing={2} className={styles.homepadding}>
+      <Grid container spacing={2} className={styles.homepadding} sx={{mt:'10px'}}>
         {vissionmission.map((data, index) => (
-          <Grid item xs={12} md={6} lg={6} sm={12} key={index}>
+          <Grid item xs={12} md={6} lg={6} sm={12} key={index} >
             <CardContent
               sx={{
                 backgroundImage: data.backgroundImage,
                 backgroundSize: "cover",
-                p: "10px",borderRadius:'15px'
+                p: "10px",
+                borderRadius: "15px",
+                padding:'20px'
               }}
             >
               <TypographyText
@@ -206,7 +230,12 @@ const Index = () => {
         ))}
       </Grid>
       {/* *****************************section 2***************************** */}
-      <Grid container spacing={2} className={styles.homepadding} sx={{pt:'30px'}}>
+      <Grid
+        container
+        spacing={2}
+        className={styles.homepadding}
+        sx={{ pt: "30px" }}
+      >
         <Banner
           data={data}
           className={styles.homeoffer1img}
@@ -229,7 +258,7 @@ const Index = () => {
             textAlign="centre"
             Typography={<>What We Offer</>}
             fontWeight="bolder"
-            variant={isSmallScreen ? "h5" : "h4"}
+            variant={"h5"}
           />
           <Grid
             item
@@ -244,7 +273,7 @@ const Index = () => {
 
           <TypographyText
             textAlign="left"
-            marginTop='10px'
+            marginTop="10px"
             Typography={
               <>
                 At ToyCity, we specialize in crafting comprehensive marketing
@@ -280,20 +309,9 @@ const Index = () => {
           <TypographyText
             Typography={<>360 Marketing </>}
             fontWeight="bolder"
-            variant={isSmallScreen ? "h5" : "h4"}
+            variant={"h5"}
             textAlign="centre"
           />
-
-          <Grid
-            item
-            xs={12}
-            md={12}
-            lg={12}
-            sm={12}
-            sx={{ display: "flex", justifyContent: "center" }}
-          >
-            <DividerComp />
-          </Grid>
         </Grid>
         {datas.map((data, index) => (
           <Grid item xs={12} md={6} lg={3} sm={12} key={index}>

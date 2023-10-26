@@ -119,13 +119,11 @@ const Homesection1 = () => {
       </Slider>
 
       {/* *****************************section 2***************************** */}
-      <div className={styles.homepadding2}
-      
-      >
+      <div className={styles.homepadding2}>
         <Grid
           container
           spacing={2}
-          sx={{ paddingTop: isSmallScreen ? "0px" : "25px",}}
+          sx={{ paddingTop: isSmallScreen ? "0px" : "25px" }}
         >
           <Grid item xs={12} md={6} lg={6} sm={12} sx={{ textAlign: "left" }}>
             <div data-aos="fade-up" data-aos-duration="1000">
@@ -175,7 +173,7 @@ const Homesection1 = () => {
               color="#001655"
             />
           </Grid>
-          <Grid item xs={12} md={6} lg={6} sm={12} sx={{margin:'auto'}} >
+          <Grid item xs={12} md={6} lg={6} sm={12} sx={{ margin: "auto" }}>
             <img
               src="/aboutus.jpg"
               alt="about_section"

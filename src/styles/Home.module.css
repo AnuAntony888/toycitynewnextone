@@ -37,3 +37,29 @@
   text-align: left;
 }
 .listitems{padding: 0 !important;}
+
+
+.slickbuttonprev {
+  left: 0 !important;
+
+  top: 30% !important;
+  z-index: 1000 !important;
+  position: absolute !important;
+  margin: auto;
+  border-radius: 50% !important;
+  background-color: whitesmoke !important;
+  display: block;
+  position: absolute;
+}
+.slickbuttonnext {
+  display: block;
+  position: absolute;
+  right: 0 !important;
+  top: 30% !important;
+  z-index: 1000 !important;
+  position: absolute;
+
+  margin: auto;
+  border-radius: 50% !important;
+  background-color: whitesmoke !important;
+}

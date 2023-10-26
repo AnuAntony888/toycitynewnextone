@@ -71,6 +71,7 @@ const HomeTreandingsection = () => {
         </Grid>
         {data?.map((curElem) => (
           <Grid item xs={6} lg={3} md={3} sm={4} key={curElem.index}>
+                   <div data-aos="zoom-in" data-aos-duration="1000">
             <Card
               sx={{
                 backgroundColor: "transparent",
@@ -120,7 +121,8 @@ const HomeTreandingsection = () => {
                   <p className={styles.flbrandtxt1}>{curElem?.name}</p>
                 </CardContent>
               </Box>
-            </Card>
+              </Card>
+              </div>
           </Grid>
         ))}
       </Grid>

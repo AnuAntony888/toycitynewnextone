@@ -21,10 +21,10 @@ const Header = () => {
     <>
       <AppBar
         sx={{
-          // backgroundColor: "transparent",
-          backgroundColor:' #ebebeb',
+          backgroundColor: "transparent",
+
           width: "100%",
-height:'90px',
+          height: "90px",
           justifyContent: "space-between",
           position: "relative",
         }}
@@ -37,7 +37,7 @@ height:'90px',
                 width={130}
                 height={"auto"}
                 onClick={refreshPage}
-                style={{marginTop:'10px'}}
+                style={{ marginTop: "10px" }}
               />
               <Box>
                 {navItems.map((item) => (
@@ -45,13 +45,13 @@ height:'90px',
                     key={item}
                     sx={{
                       color: "darkblue",
-                       fontWeight: "500",
+                      fontWeight: "500",
                       // fontFamily: "Lato",
-                      fontFamily:'Rubik',
+                      fontFamily: "Rubik",
                       fontSize: ".9rem",
                       textTransform: "capitalize",
-                      marginTop: '40px',
-                      minWidth:'85px'
+                      marginTop: "40px",
+                      minWidth: "85px",
                     }}
                   >
                     {item}
@@ -85,5 +85,4 @@ export const navItems = [
   <Link href={"/Partners"}>Partners</Link>,
   <Link href={"/NewsandEvents"}>News and events</Link>,
   <Link href={"/Contact"}>Contact</Link>,
- 
 ];
