@@ -5,15 +5,17 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {
   Buttons,
+  CardWithIcon,
   DividerComp,
+  Homecomponent1,
   TypographyText,
 } from "../../../ReusableComponent/Reusab";
-import { Grid } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import "aos/dist/aos.css";
 import AOS from "aos";
-const Homesection3 = () => {
+const Homesection3 = ({ large, matches, matches2 }) => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
   useEffect(() => {
@@ -31,7 +33,7 @@ const Homesection3 = () => {
     autoplay: true, // Enable autoplay
     autoplaySpeed: 1400,
   };
-  return (
+  return (<>
     <div className={styles.homepadding}>
       {/* *****************************section 6***************************** */}
       <Grid
@@ -41,35 +43,36 @@ const Homesection3 = () => {
         className={styles.homepadding1}
       >
         <Grid item xs={12} md={6} lg={6} sm={12} sx={{ textAlign: "left" }}>
-        <div data-aos="fade-up" data-aos-duration="1000">
-          <TypographyText
-            Typography={<>Want to know more?</>}
-            fontWeight="600"
-            variant={"h5"}
-            textAlign="left"
-          />
+          <div data-aos="fade-up" data-aos-duration="1000">
+            <TypographyText
+              Typography={<>Want to know more?</>}
+              fontWeight="600"
+              variant={"h5"}
+              textAlign="left"
+            />
           </div>
           <div data-aos="zoom-in">
-          <TypographyText
-            textAlign="left"
-            marginTop="10px"
-            Typography={
-              <>
-                Toy City is a one-stop shop for the world of toy distribution.
-                We do a lot more than just selling your stock to the retailers.
-                We ensure that enough footprint is built around it through,
-                visual merchandising creative marketing and product placement.
-                We currently work with 24 brands and have a tremendously
-                effective team, experienced in managing operations, logistics
-                and marketing. The team works hard and smart to enrich the brand
-                experience at every stop from sell-in to sell-out by managing
-                sales, in-store displays, events, advertising etc.
-                <br />
-                <br />
-              </>
-            }
+            <TypographyText
+              textAlign="left"
+              marginTop="10px"
+              Typography={
+                <>
+                  Toy City is a one-stop shop for the world of toy distribution.
+                  We do a lot more than just selling your stock to the
+                  retailers. We ensure that enough footprint is built around it
+                  through, visual merchandising creative marketing and product
+                  placement. We currently work with 24 brands and have a
+                  tremendously effective team, experienced in managing
+                  operations, logistics and marketing. The team works hard and
+                  smart to enrich the brand experience at every stop from
+                  sell-in to sell-out by managing sales, in-store displays,
+                  events, advertising etc.
+                  <br />
+                  <br />
+                </>
+              }
             />
-            </div>
+          </div>
           <Buttons
             Buttonname={"Contact Us"}
             fontWeight="500"
@@ -116,8 +119,12 @@ const Homesection3 = () => {
           </Slider>
         </Grid>
       </Grid>
+      {/*888888888888888888888888888888*/}
+     
     </div>
-  );
+  
+  
+  </>);
 };
 
 export default Homesection3;

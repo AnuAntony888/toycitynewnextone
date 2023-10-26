@@ -6,7 +6,9 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import styles from "../src/styles/Home.module.css";
-
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { CardActions, CardMedia, Grid } from "@mui/material";
 export function TypographyText(props) {
   return (
     <Typography
@@ -106,3 +108,115 @@ export function DividerComp(props) {
     ></div>
   );
 }
+
+
+
+
+
+
+
+export function Homecomponent1(props) {
+  const isSmallScreen = useMediaQuery("(max-width:1000px)");
+  const isSmallScreen2 = useMediaQuery("(max-width:450px)");
+  return (
+    <>
+      {!isSmallScreen ? (
+        <Grid
+          container
+          sx={{
+            backgroundImage: props.backgroundImage,
+            // backgroundPosition: "50% ",
+            objectFit: "cover",
+            width: "100%",
+            backgroundRepeat: "no-repeat",
+
+            backgroundSize: "cover",
+          }}
+        >
+          <Grid item lg={1} md={1}></Grid>
+          <Grid item lg={7} md={8} sx={{ padding: "8%" }}>
+            <Card sx={{ padding: "5%" }}>
+              <CardContent sx={{ textAlign: "left" }}>
+           
+
+                <TypographyText
+                fontWeight="600"
+                variant={"h5"}
+                textAlign="left"
+                  Typography={props.h1}
+                />
+
+            
+                <TypographyText
+                  variant="body2"
+                  Typography={props.Typography1}
+                />
+              </CardContent>
+
+              <CardActions>
+                <Buttons
+                  Buttonname={props.Buttonname}
+                  fontWeight="500"
+                  bgcolor="#FFBC00"
+                  bgcolor1="red"
+                  color1="white"
+                  color="#001655"
+                />
+               
+              </CardActions>
+            </Card>
+          </Grid>
+        </Grid>
+      ) : (
+        <Grid container spacing={0}>
+          <Grid item xs={12}>
+            <CardMedia
+              component="img"
+              sx={{
+                aspectRatio: !isSmallScreen2 ? "3/1" : "3/2",
+              }}
+              image={props.image}
+              alt="green iguana"
+            />
+          </Grid>
+
+          <Grid
+            item
+            xs={12}
+            sx={{
+              paddingLeft: "10%",
+              paddingRight: "10%",
+              transform: "translatey(-10%);",
+            }}
+          >
+            <Card>
+              <CardContent sx={{ textAlign: "left" }}>
+                <TypographyText
+                  fontSize=" 14"
+                  color="text.secondary"
+                  Typography={props.Typography}
+                />
+
+                <TypographyText
+                  variant="h5"
+                  component="div"
+                  Typography={props.h1}
+                />
+
+                <div className="sep"></div>
+                <TypographyText
+                  variant="body2"
+                  Typography={props.Typography1}
+                />
+              </CardContent>
+
+            
+            </Card>
+          </Grid>
+        </Grid>
+      )}
+    </>
+  );
+}
+
+

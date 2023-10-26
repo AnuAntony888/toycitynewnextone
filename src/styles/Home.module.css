@@ -63,3 +63,37 @@
   border-radius: 50% !important;
   background-color: whitesmoke !important;
 }
+
+.trainContainer{
+  /* Add background image */
+  background-image: url('../../public/chill.avif');
+overflow-x: hidden;
+background-size: cover; /* Adjust the image sizing */
+background-repeat: no-repeat; /* Prevent image from repeating */
+
+}
+.comp1tx1{
+padding: 3%;
+padding-right: 3%;
+text-align: right;
+
+font-weight: bolder;
+font-size: 3rem;
+}
+.train {
+position: relative;
+max-width: 900px;
+padding-top: 2%;
+padding-bottom: 2%;
+right: calc(-100vw - 0px); /* Initial position off-screen on the right */
+animation: moveTrain 20s linear infinite; /* 5s duration, linear easing, infinite loop */
+}
+
+@keyframes moveTrain {
+0% {
+right: calc(-50vw); /* Initial position off-screen on the right */
+}
+100% {
+right: calc(100vw + 100px); /* Move to the left edge of the viewport */
+}
+}

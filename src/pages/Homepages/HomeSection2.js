@@ -8,6 +8,8 @@ import {
   TypographyText,
 } from "../../../ReusableComponent/Reusab";
 import Slider from "react-slick";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
@@ -17,7 +19,6 @@ function SamplePrevArrow(props) {
   return (
     <>
       <div className={styles.slickbuttonprev} onClick={onClick}>
- 
         <KeyboardArrowLeftIcon />
       </div>
     </>
@@ -33,8 +34,9 @@ function SampleNextArrow(props) {
   );
 }
 const HomeSection2 = () => {
-  const data = ["/banner2.jpg"];
-
+  const data = ["/paw.jpg"];
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
   const data1 = [
     { img: "/lego.webp" },
     { img: "/barbie.webp" },
@@ -110,10 +112,28 @@ const HomeSection2 = () => {
   };
   return (
     <>
+      <Grid container spacing={0} sx={{ marginTop: "40px" }}>
+        <Grid xs={12} className={styles.trainContainer}>
+          <TypographyText
+            Typography={<>Together Lets inspired by children</>}
+            fontWeight="bolder"
+            variant={"h5"}
+            textAlign="right"
+            padding={"2%"}
+          />
+
+          <img
+            src={"/train-children.png"} // Replace with your image path
+            alt="Moving Train"
+            width={!isSmallScreen ? "40%" : "70%"}
+            className={styles.train}
+          />
+        </Grid>
+      </Grid>
       <div className={styles.homepadding}>
         {/* *****************************section 4***************************** */}
         <Grid container columnSpacing={{ xs: 1, sm: 1, md: 1 }} rowSpacing={1}>
-          <Grid item xs={12} md={12} lg={12} sm={12} sx={{ marginTop: "40px" }}>
+          {/* <Grid item xs={12} md={12} lg={12} sm={12} sx={{ marginTop: "40px" }}>
             <Banner
               data={data}
               className={styles.homeoffer1img}
@@ -129,7 +149,7 @@ const HomeSection2 = () => {
               }}
               style={{ borderRadius: "25px" }}
             />
-          </Grid>
+          </Grid> */}
           {/* *****************************section 5***************************** */}
           <Grid
             item
@@ -253,10 +273,50 @@ const HomeSection2 = () => {
         container
         columnSpacing={{ xs: 2, sm: 2, md: 3 }}
         rowSpacing={1}
-        sx={{ pb: "2%" }}
+        sx={{ pb: "2%", pt: "2%" }}
         className={styles.homepadding2}
       >
-        <Grid item xs={12} md={12} lg={12} sm={12} sx={{ textAlign: "center" }}>
+        <Grid item xs={12} md={12} lg={12} sm={12} sx={{ marginTop: "40px" }}>
+          <Banner
+            data={data}
+            className={styles.homeoffer1img}
+            lg={12}
+            md={12}
+            sm={12}
+            xs={12}
+            height={{
+              lg: "21vw",
+              md: "20vw",
+              sm: "20vw",
+              xs: "46vw",
+            }}
+            style={{ borderRadius: "25px" }}
+          />
+        </Grid>
+      </Grid>
+      <Grid
+        container
+        columnSpacing={{ xs: 2, sm: 2, md: 3 }}
+        rowSpacing={1}
+        sx={{
+          pb: "2%",
+          pt: "2%",
+          backgroundImage: `url('/ab.avif')`,
+          paddingBottom: "40px",
+          backgroundSize: "cover",
+        }}
+        className={styles.homepadding2}
+      >
+        <Grid
+          item
+          xs={12}
+          md={12}
+          lg={12}
+          sm={12}
+          sx={{
+            textAlign: "center",
+          }}
+        >
           <TypographyText
             Typography={<>Latest Promotion</>}
             fontWeight="bolder"
@@ -269,8 +329,8 @@ const HomeSection2 = () => {
             Typography={
               <>
                 Bring your littles ones to the Meet and Greet of Gabby and
-                little cakey from Gabbys Dollhouse for a fun evening of
-                singing, dancing, coloring and a MEOWmazing experience!
+                little cakey from Gabbys Dollhouse for a fun evening of singing,
+                dancing, coloring and a MEOWmazing experience!
                 <br />
               </>
             }

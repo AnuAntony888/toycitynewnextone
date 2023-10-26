@@ -18,19 +18,19 @@ const HomeTreandingsection = () => {
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
   const data = [
     {
-      imageUrl: "/topseller.jpg",
+      imageUrl: "/who3.jpg",
       name: "Bitzee, Interactive Toy Digital Pet and Case with 15 Animals Inside.",
     },
     {
-      imageUrl: "/topseller.jpg",
+      imageUrl: "/who2.jpg",
       name: "Bitzee, Interactive Toy Digital Pet and Case with 15 Animals Inside.",
     },
     {
-      imageUrl: "/topseller.jpg",
+      imageUrl: "/who3.jpg",
       name: "Bitzee, Interactive Toy Digital Pet and Case with 15 Animals Inside.",
     },
     {
-      imageUrl: "/topseller.jpg",
+      imageUrl: "/who2.jpg",
       name: "Bitzee, Interactive Toy Digital Pet and Case with 15 Animals Inside.",
     },
   ];
@@ -51,16 +51,7 @@ const HomeTreandingsection = () => {
             textAlign="centre"
           />
 
-          {/* <Grid
-            item
-            xs={12}
-            md={12}
-            lg={12}
-            sm={12}
-            sx={{ display: "flex", justifyContent: "center" }}
-          >
-            <DividerComp />
-          </Grid> */}
+         
 
           <TypographyText
             Typography={<>Check out our most trending products for fall 2023
