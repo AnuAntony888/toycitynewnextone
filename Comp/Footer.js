@@ -15,9 +15,9 @@ import { navItems } from "./Header";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from '@mui/icons-material/Twitter';
 const Footer = () => {
-  return (
+  return (<>
     <Box sx={{ backgroundColor: "black" }} className={styles.homepadding}>
-      <Grid container spacing={4} sx={{ textAlign: "left" }}>
+      <Grid container spacing={4} sx={{ textAlign: "left" ,marginTop:'5px'}}>
         <Grid item lg={3} md={3} sm={6} xs={12}>
           <TypographyText
             Typography={<>Contact</>}
@@ -124,7 +124,15 @@ const Footer = () => {
         </Grid>
       </Grid>
     </Box>
-  );
+    <Box sx={{ backgroundColor: "#222425" ,pb:'10px'}} className={styles.homepadding}>
+    <TypographyText
+            Typography={<>Toycity © 2020    Powered by Vedaham Business Solutions Pvt Ltd</>}
+      fontSize='.8rem'
+            textAlign="centre"
+            color="whitesmoke"
+          />
+      </Box>
+ </> );
 };
 
 export default Footer;

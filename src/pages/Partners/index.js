@@ -1,132 +1,172 @@
-import { Card, CardActions, CardContent, CardMedia, Grid } from "@mui/material";
+import {
+  Box,
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Grid,
+} from "@mui/material";
 import React from "react";
 import { DividerComp, TypographyText } from "../../../ReusableComponent/Reusab";
 import styles from "../../styles/Home.module.css";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 const Index = () => {
-  const datas = [
-    { img: "/shopify-offers.png" },
-    { img: "/shopify-offers.png" },
-    { img: "/shopify-offers.png" },
-    { img: "/shopify-offers.png" },
-    { img: "/shopify-offers.png" },
-    { img: "/shopify-offers.png" },
-    { img: "/shopify-offers.png" },
-    { img: "/shopify-offers.png" },
+  const data = [
+    {
+      imageUrl: "/who3.jpg",
+    },
+    {
+      imageUrl: "/who2.jpg",
+    },
+    {
+      imageUrl: "/who3.jpg",
+    },
+    {
+      imageUrl: "/who2.jpg",
+    },
+    {
+      imageUrl: "/who3.jpg",
+    },
+    {
+      imageUrl: "/who2.jpg",
+    },
+    {
+      imageUrl: "/who3.jpg",
+    },
+    {
+      imageUrl: "/who2.jpg",
+    },
   ];
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <div>
+      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+        <Grid item xs={12}>
+          <Box
+            sx={{
+              backgroundImage: "url(/pinkabout.jpg)",
+              backgroundSize: "cover",
+              padding: isSmallScreen ? "100px" : "150px",
+            }}
+          ></Box>
+        </Grid>
+      </Grid>
       <Grid
         container
         spacing={2}
         className={styles.homepadding2}
         sx={{ paddingBottom: "50px", pt: "20px" }}
       >
-        {/* <Grid item xs={12} md={12} lg={12} sm={12}>
-          <TypographyText
-            Typography={<>Toys</>}
-            fontWeight="bolder"
-            variant={"h6"}
-            textAlign="centre"
-          />
-        </Grid> */}
-        <Grid item xs={12} md={12} lg={12} sm={12}>
+        <Grid item xs={12} md={12} lg={12} sm={12} sx={{marginTop:'20px',marginBottom:'10px'}}>
           <TypographyText
             Typography={<>International and Regional Partners</>}
-            fontWeight="bolder"
-            variant={isSmallScreen ? "h5" : "h4"}
+            fontWeight="600"
+            variant={"h5"}
             textAlign="centre"
           />
-
-          <Grid
-            item
-            xs={12}
-            md={12}
-            lg={12}
-            sm={12}
-            sx={{ display: "flex", justifyContent: "center" }}
-          >
-            {" "}
-            <DividerComp />
-          </Grid>
+          <TypographyText
+            Typography={
+              <>
+                "International partners are organizations or companies from
+                around the world that we collaborate with to reach a broader
+                audience, expand our market presence, and work together on
+                global initiatives."
+                <br />
+                <br />
+                "Regional partners are local or nearby organizations that we
+                team up with to enhance our presence in specific geographic
+                areas, ensuring that our products or services are well-received
+                by local communities and customers."
+              </>
+            }
+            textAlign="justify"
+          />
         </Grid>
-        {datas.map((item, index) => (
+        {data.map((item, index) => (
           <Grid item xs={4} md={2.4} lg={1.5} sm={3} key={index}>
             <CardMedia
               component="img"
-              image={item.img}
+              image={item.imageUrl}
               alt="brand_image"
               width={"100%"}
               sx={{ borderRadius: "30px" }}
             />
           </Grid>
         ))}
-        <Grid item xs={12} md={12} lg={12} sm={12}>
+        <Grid item xs={12} md={12} lg={12} sm={12} sx={{marginTop:'20px',marginBottom:'10px'}}>
           <TypographyText
             Typography={<>Retail Partners</>}
-            fontWeight="bolder"
-            variant={isSmallScreen ? "h5" : "h4"}
+            fontWeight="600"
+            variant={"h5"}
             textAlign="centre"
           />
-
-          <Grid
-            item
-            xs={12}
-            md={12}
-            lg={12}
-            sm={12}
-            sx={{ display: "flex", justifyContent: "center" }}
-          >
-            {" "}
-            <DividerComp />
-          </Grid>
+          <TypographyText
+            Typography={
+              <>
+                "Retail partners are trusted businesses that work with us to
+                make our products or services available to a wider audience.
+                They provide a physical or online platform for customers to
+                access and purchase our offerings, helping us reach and serve
+                more people effectively."
+              </>
+            }
+            textAlign="justify"
+          />
         </Grid>
-        {datas.map((item, index) => (
+        {data.map((item, index) => (
           <Grid item xs={4} md={2.4} lg={1.5} sm={3} key={index}>
             <CardMedia
               component="img"
-              image={item.img}
+              image={item.imageUrl}
               alt="brand_image"
               width={"100%"}
               sx={{ borderRadius: "30px" }}
             />
           </Grid>
         ))}
-        <Grid item xs={12} md={12} lg={12} sm={12}>
-          <TypographyText
+
+
+
+        <Grid item xs={12} md={12} lg={12} sm={12}  sx={{marginTop:'20px',marginBottom:'10px'}}>
+         
+        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+        <Grid item xs={12}>
+          <Box
+            sx={{
+              backgroundImage: "url(/green.jpg)",
+              backgroundSize: "cover",
+                  padding: isSmallScreen ? "50px" : "70px",
+              borderRadius:'25px'
+            }}
+              >
+                <TypographyText
             Typography={<>What Our Partners Say about us</>}
-            fontWeight="bolder"
-            variant={isSmallScreen ? "h5" : "h4"}
+            fontWeight="600"
+            variant={"h5"}
             textAlign="centre"
-          />
-
-          <Grid
-            item
-            xs={12}
-            md={12}
-            lg={12}
-            sm={12}
-            sx={{ display: "flex", justifyContent: "center" }}
-          >
-            {" "}
-            <DividerComp />
-          </Grid>
-
-          <TypographyText
+                />
+                 <TypographyText
             Typography={
               <>
                 Our brand portfolio includes wide range of products which covers
                 all categories suitable for different age groups
               </>
             }
-            marginTop='10px'
-            fontWeight="bolder"
-            variant={"1.23rem"}
+            marginTop="10px"
+          
+        
             textAlign="centre"
           />
+          </Box>
+        </Grid>
+      </Grid>
+          
+
+         
+
+         
         </Grid>
         {Data.map((post, index) => (
           <Grid lg={4} md={4} sm={6} xs={12} key={index}>
@@ -140,7 +180,8 @@ const Index = () => {
               </CardContent>
 
               <CardActions sx={{ float: "right" }}>
-                <img src={post.img} alt="logo" width={53} />&nbsp;&nbsp;
+                <img src={post.img} alt="logo" width={53} />
+                &nbsp;&nbsp;
                 <TypographyText
                   Typography={post.text1}
                   textAlign={"right"}

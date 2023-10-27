@@ -273,10 +273,10 @@ const HomeSection2 = () => {
         container
         columnSpacing={{ xs: 2, sm: 2, md: 3 }}
         rowSpacing={1}
-        sx={{ pb: "2%", pt: "2%" }}
         className={styles.homepadding2}
+        sx={{marginTop:'20px',marginBottom:'40px'}}
       >
-        <Grid item xs={12} md={12} lg={12} sm={12} sx={{ marginTop: "40px" }}>
+        <Grid item xs={12} md={12} lg={12} sm={12}>
           <Banner
             data={data}
             className={styles.homeoffer1img}
@@ -301,7 +301,8 @@ const HomeSection2 = () => {
         sx={{
           pb: "2%",
           pt: "2%",
-          backgroundImage: `url('/ab.avif')`,
+           backgroundColor:'#FDD995',
+          //  backgroundImage: `url('/ab.avif')`,
           paddingBottom: "40px",
           backgroundSize: "cover",
         }}

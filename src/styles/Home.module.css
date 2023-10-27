@@ -97,3 +97,32 @@ right: calc(-50vw); /* Initial position off-screen on the right */
 right: calc(100vw + 100px); /* Move to the left edge of the viewport */
 }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.animatedText {
+  
+  animation: moveText 2s linear infinite; /* Adjust the animation duration and other properties as needed */
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(0); /* Start position */
+  }
+  100% {
+    transform: translateX(200px); /* End position - adjust the value to control the distance the text moves */
+  }
+}
+
+
+
+

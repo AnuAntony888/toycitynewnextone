@@ -45,7 +45,7 @@ const HomeTreandingsection = () => {
       >
         <Grid item xs={12} md={12} lg={12} sm={12}>
           <TypographyText
-            Typography={<>Treanding</>}
+            Typography={<>Trending</>}
             fontWeight="bolder"
             variant={ "h5" }
             textAlign="centre"

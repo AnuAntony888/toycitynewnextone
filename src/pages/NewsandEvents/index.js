@@ -1,4 +1,4 @@
-import { CardContent, CardMedia, Grid } from "@mui/material";
+import { Box, CardContent, CardMedia, Grid } from "@mui/material";
 import React from "react";
 import {
   Buttons,
@@ -54,6 +54,25 @@ const Index = () => {
   ];
   return (
     <div>
+        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+        <Grid item xs={12}>
+          <Box
+            sx={{
+              backgroundImage: "url(/secondlast.avif)",
+               backgroundSize: "cover",
+              padding: isSmallScreen ? "50px" : "100px",
+            }}
+          >
+          <TypographyText
+            Typography={<>News And Events</>}
+            fontWeight="bolder"
+            variant={"h5"}
+            textAlign="centre"
+          />
+          </Box>
+        </Grid>
+
+</Grid>
       <Grid container spacing={2} className={styles.homepadding} sx={{pb:'50px'}}>
         <Grid item xs={12} md={12} lg={12} sm={12}>
           <TypographyText
