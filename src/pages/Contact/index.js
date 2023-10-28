@@ -1,39 +1,48 @@
 import React from "react";
 import Banner from "../../../ReusableComponent/Banner";
 import {
+  Box,
   Grid,
   List,
   ListItem,
   ListItemIcon,
   ListItemText,
   TextField,
+
 } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import styles from "../../styles/Home.module.css";
 import HomeIcon from "@mui/icons-material/Home";
 import { Buttons, TypographyText } from "../../../ReusableComponent/Reusab";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
 import PublicIcon from "@mui/icons-material/Public";
+import { useTheme } from "@mui/material/styles";
 const Index = () => {
   const data = ["/th.jpeg"];
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <div>
-      <Grid container columnSpacing={{ xs: 1, sm: 1, md: 1 }} rowSpacing={1}>
-        <Banner
-          data={data}
-          className={styles.homeoffer1img}
-          lg={12}
-          md={12}
-          sm={12}
-          xs={12}
-          height={{
-            lg: "21vw",
-            md: "20vw",
-            sm: "20vw",
-            xs: "55vw",
-          }}
-        />
+       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+        <Grid item xs={12}>
+          <Box
+            sx={{
+              backgroundImage: "url(/contactus.avif)",
+              backgroundSize: "cover",
+              padding: isSmallScreen ? "50px" : "100px",
+            }}
+          >
+            <TypographyText
+              Typography={<>Contact Us</>}
+              fontWeight="bolder"
+              variant={"h5"}
+              textAlign="centre"
+            />
+          </Box>
+        </Grid>
       </Grid>
+     
       <Grid
         container
         spacing={2}

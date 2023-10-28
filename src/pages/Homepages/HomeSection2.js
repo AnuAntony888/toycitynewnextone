@@ -301,8 +301,8 @@ const HomeSection2 = () => {
         sx={{
           pb: "2%",
           pt: "2%",
-           backgroundColor:'#FDD995',
-          //  backgroundImage: `url('/ab.avif')`,
+          //  backgroundColor:'#FDD995',
+            backgroundImage: `url('/component.avif')`,
           paddingBottom: "40px",
           backgroundSize: "cover",
         }}

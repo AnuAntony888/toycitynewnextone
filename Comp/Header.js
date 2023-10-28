@@ -8,6 +8,7 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 
 import Link from "next/link";
+import ResponsiveHeader from "./ResponsiveHeader";
 
 const Header = () => {
   const theme = useTheme();
@@ -67,8 +68,8 @@ const Header = () => {
                 height={"auto"}
                 onClick={refreshPage}
               />
-              {/* 
-              <ResponsiveHeader /> */}
+              <ResponsiveHeader/>
+        
             </>
           )}
         </Toolbar>

@@ -6,11 +6,13 @@ import {
   CardMedia,
   Grid,
 } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import { DividerComp, TypographyText } from "../../../ReusableComponent/Reusab";
 import styles from "../../styles/Home.module.css";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
+import "aos/dist/aos.css";
+import AOS from "aos";
 const Index = () => {
   const data = [
     {
@@ -40,6 +42,13 @@ const Index = () => {
   ];
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
+  useEffect(() => {
+    AOS.init({
+      // Global settings here
+      duration: 1000,
+      once: true, // Only animate once
+    });
+  }, []);
   return (
     <div>
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
@@ -50,7 +59,14 @@ const Index = () => {
               backgroundSize: "cover",
               padding: isSmallScreen ? "100px" : "150px",
             }}
-          ></Box>
+          >
+            <TypographyText
+              Typography={<>Our Trusted Partners</>}
+              fontWeight="bolder"
+              variant={"h5"}
+              textAlign="centre"
+            />
+          </Box>
         </Grid>
       </Grid>
       <Grid
@@ -59,30 +75,41 @@ const Index = () => {
         className={styles.homepadding2}
         sx={{ paddingBottom: "50px", pt: "20px" }}
       >
-        <Grid item xs={12} md={12} lg={12} sm={12} sx={{marginTop:'20px',marginBottom:'10px'}}>
+        <Grid
+          item
+          xs={12}
+          md={12}
+          lg={12}
+          sm={12}
+          sx={{ marginTop: "20px", marginBottom: "10px" }}
+        >
+            <div data-aos="fade-up" data-aos-duration="1000">
           <TypographyText
             Typography={<>International and Regional Partners</>}
             fontWeight="600"
             variant={"h5"}
             textAlign="centre"
-          />
+            />
+          </div>
+          <div data-aos="zoom-in" data-aos-duration="1000">
           <TypographyText
             Typography={
               <>
-                "International partners are organizations or companies from
+                International partners are organizations or companies from
                 around the world that we collaborate with to reach a broader
                 audience, expand our market presence, and work together on
-                global initiatives."
+                global initiatives.
                 <br />
                 <br />
-                "Regional partners are local or nearby organizations that we
+                Regional partners are local or nearby organizations that we
                 team up with to enhance our presence in specific geographic
                 areas, ensuring that our products or services are well-received
-                by local communities and customers."
+                by local communities and customers.
               </>
             }
             textAlign="justify"
-          />
+            />
+            </div>
         </Grid>
         {data.map((item, index) => (
           <Grid item xs={4} md={2.4} lg={1.5} sm={3} key={index}>
@@ -95,25 +122,36 @@ const Index = () => {
             />
           </Grid>
         ))}
-        <Grid item xs={12} md={12} lg={12} sm={12} sx={{marginTop:'20px',marginBottom:'10px'}}>
-          <TypographyText
-            Typography={<>Retail Partners</>}
-            fontWeight="600"
-            variant={"h5"}
-            textAlign="centre"
-          />
-          <TypographyText
-            Typography={
-              <>
-                "Retail partners are trusted businesses that work with us to
-                make our products or services available to a wider audience.
-                They provide a physical or online platform for customers to
-                access and purchase our offerings, helping us reach and serve
-                more people effectively."
-              </>
-            }
-            textAlign="justify"
-          />
+        <Grid
+          item
+          xs={12}
+          md={12}
+          lg={12}
+          sm={12}
+          sx={{ marginTop: "20px", marginBottom: "10px" }}
+        >
+          <div data-aos="fade-up" data-aos-duration="1000">
+            <TypographyText
+              Typography={<>Retail Partners</>}
+              fontWeight="600"
+              variant={"h5"}
+              textAlign="centre"
+            />
+          </div>
+          <div data-aos="zoom-in" data-aos-duration="1000">
+            <TypographyText
+              Typography={
+                <>
+                  Retail partners are trusted businesses that work with us to
+                  make our products or services available to a wider audience.
+                  They provide a physical or online platform for customers to
+                  access and purchase our offerings, helping us reach and serve
+                  more people effectively.
+                </>
+              }
+              textAlign="justify"
+            />
+          </div>
         </Grid>
         {data.map((item, index) => (
           <Grid item xs={4} md={2.4} lg={1.5} sm={3} key={index}>
@@ -127,46 +165,52 @@ const Index = () => {
           </Grid>
         ))}
 
-
-
-        <Grid item xs={12} md={12} lg={12} sm={12}  sx={{marginTop:'20px',marginBottom:'10px'}}>
-         
-        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-        <Grid item xs={12}>
-          <Box
-            sx={{
-              backgroundImage: "url(/green.jpg)",
-              backgroundSize: "cover",
+        <Grid
+          item
+          xs={12}
+          md={12}
+          lg={12}
+          sm={12}
+          sx={{ marginTop: "20px", marginBottom: "10px" }}
+        >
+          <Grid
+            container
+            rowSpacing={1}
+            columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+          >
+            <Grid item xs={12}>
+              <Box
+                sx={{
+                  backgroundImage: "url(/green.jpg)",
+                  backgroundSize: "cover",
                   padding: isSmallScreen ? "50px" : "70px",
-              borderRadius:'25px'
-            }}
+                  borderRadius: "25px",
+                }}
               >
-                <TypographyText
-            Typography={<>What Our Partners Say about us</>}
-            fontWeight="600"
-            variant={"h5"}
-            textAlign="centre"
-                />
-                 <TypographyText
-            Typography={
-              <>
-                Our brand portfolio includes wide range of products which covers
-                all categories suitable for different age groups
-              </>
-            }
-            marginTop="10px"
-          
-        
-            textAlign="centre"
-          />
-          </Box>
-        </Grid>
-      </Grid>
-          
-
-         
-
-         
+                <div data-aos="fade-up" data-aos-duration="1000">
+                  <TypographyText
+                    Typography={<>What Our Partners Say about us</>}
+                    fontWeight="600"
+                    variant={"h5"}
+                    textAlign="centre"
+                  />
+                </div>
+                <div data-aos="zoom-in" data-aos-duration="1000">
+                  <TypographyText
+                    Typography={
+                      <>
+                        Our brand portfolio includes wide range of products
+                        which covers all categories suitable for different age
+                        groups
+                      </>
+                    }
+                    marginTop="10px"
+                    textAlign="centre"
+                  />
+                </div>
+              </Box>
+            </Grid>
+          </Grid>
         </Grid>
         {Data.map((post, index) => (
           <Grid lg={4} md={4} sm={6} xs={12} key={index}>

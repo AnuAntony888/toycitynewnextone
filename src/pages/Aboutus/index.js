@@ -119,6 +119,7 @@ const Index = () => {
   }, []);
   return (
     <div>
+         
       <Grid container spacing={5}>
         <Grid item xs={12} sx={{ textAlign: "center", paddingBottom: "10px" }}>
           <Banner

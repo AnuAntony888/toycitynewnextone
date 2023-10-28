@@ -1,5 +1,5 @@
 import { Box, CardContent, CardMedia, Grid } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Buttons,
   DividerComp,
@@ -8,13 +8,22 @@ import {
 import styles from "../../styles/Home.module.css";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import "aos/dist/aos.css";
+import AOS from "aos";
 const Index = () => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
+  useEffect(() => {
+    AOS.init({
+      // Global settings here
+      duration: 1000,
+      once: true, // Only animate once
+    });
+  }, []);
   const newsandevents = [
     {
-      backgroundImage: "url(/vission.jpg)",
-      img:'/brandbanner.jpeg',
+      backgroundImage: "url(/component.avif)",
+      img: "/who2.jpg",
       txt1: "Toys and Games",
       txt2: (
         <>
@@ -26,8 +35,8 @@ const Index = () => {
       ),
     },
     {
-      backgroundImage: "url(/mission.jpg)",
-      img:'/brandbanner.jpeg',
+      backgroundImage: "url(/component.avif)",
+      img: "/who3.jpg",
       txt1: "Toys and Games",
       txt2: (
         <>
@@ -39,8 +48,8 @@ const Index = () => {
       ),
     },
     {
-      backgroundImage: "url(/vission.jpg)",
-      img:'/brandbanner.jpeg',
+      backgroundImage: "url(/component.avif)",
+      img: "/who4.jpg",
       txt1: "Toys and Games",
       txt2: (
         <>
@@ -54,60 +63,48 @@ const Index = () => {
   ];
   return (
     <div>
-        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid item xs={12}>
           <Box
             sx={{
               backgroundImage: "url(/secondlast.avif)",
-               backgroundSize: "cover",
+              backgroundSize: "cover",
               padding: isSmallScreen ? "50px" : "100px",
             }}
           >
-          <TypographyText
-            Typography={<>News And Events</>}
-            fontWeight="bolder"
-            variant={"h5"}
-            textAlign="centre"
-          />
+            <TypographyText
+              Typography={<>News And Events</>}
+              fontWeight="bolder"
+              variant={"h5"}
+              textAlign="centre"
+            />
           </Box>
         </Grid>
-
-</Grid>
-      <Grid container spacing={2} className={styles.homepadding} sx={{pb:'50px'}}>
-        <Grid item xs={12} md={12} lg={12} sm={12}>
-          <TypographyText
-            textAlign="centre"
-            Typography={<>News And Events</>}
-            fontWeight="bolder"
-            variant={isSmallScreen ? "h5" : "h4"}
-          />
-          <Grid
-            item
-            xs={12}
-            md={12}
-            lg={12}
-            sm={12}
-            sx={{ display: "flex", justifyContent: "center" }}
-          >
-            <DividerComp />
-          </Grid>
-        </Grid>
+      </Grid>
+      <Grid
+        container
+        spacing={2}
+        className={styles.homepadding}
+        sx={{ marginTop: "10px" }}
+      >
         {newsandevents.map((data, index) => (
           <Grid item xs={12} md={4} lg={4} sm={12} key={index}>
-                 
             <CardMedia
-            component="img"
-            alt="card"
-                width={'100%'}
-            image={data.img}
-          />   <CardContent
-          sx={{
-            backgroundImage: data.backgroundImage,
-            backgroundSize: "cover",
-            p: "10px",
-         
-          }}
-        >  
+              component="img"
+              alt="card"
+              width={"100%"}
+              height={"250px"}
+              image={data.img}
+            />
+            <Box
+              sx={{
+                backgroundImage: data.backgroundImage,
+                backgroundSize: "cover",
+                padding: "20px",
+                marginBottom: "30px",
+              }}
+            >
+                    <div data-aos="zoom-in" data-aos-duration="1000">
               <TypographyText
                 textAlign="centre"
                 Typography={data.txt1}
@@ -126,9 +123,58 @@ const Index = () => {
                 bgcolor1="red"
                 color1="white"
               />
-            </CardContent>
+              <br />
+                <br />
+                </div>
+            </Box>
           </Grid>
         ))}
+      </Grid>
+      <Grid
+        container
+        spacing={2}
+        className={styles.homepadding}
+        sx={{
+          marginTop: "30px",
+          backgroundSize: "cover",
+          marginBottom: "30px",
+
+          backgroundImage: `url('/pinkabout.jpg')`,
+        }}
+      >
+        <Grid
+          item
+          xs={12}
+          md={12}
+          lg={12}
+          sm={12}
+          sx={{ margin: isSmallScreen ? "50px" : "70px" }}
+        >
+          <div data-aos="fade-up"
+     data-aos-duration="3000">
+          <TypographyText
+            Typography={<>Get in Touch with us </>}
+            fontWeight="bolder"
+            variant={"h5"}
+            textAlign="centre"
+          />
+          <TypographyText
+            Typography={<>We’re here to help and answer any question you might have. We look forward to hearing from you.</>}
+            variant={"1rem"}
+            textAlign="centre"
+          />{" "}
+          <br />
+          <br />
+          <Buttons
+            Buttonname={"Contact Us"}
+            fontWeight="bolder"
+            color="#272974"
+            bgcolor="#F9CF37"
+            bgcolor1="red"
+            color1="white"
+            />
+            </div>
+        </Grid>
       </Grid>
     </div>
   );
