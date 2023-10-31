@@ -3,7 +3,7 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-
+import styles from "../src/styles/Home.module.css";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 
@@ -19,16 +19,19 @@ const Header = () => {
   }
 
   return (
-    <>
-      <AppBar
+    < >
+
+       <AppBar
         sx={{
           backgroundColor: "transparent",
-
           width: "100%",
           height: "90px",
           justifyContent: "space-between",
-          position: "relative",
+
+          top: '0px',
+
         }}
+        position="sticky"
       >
         <Toolbar sx={{ justifyContent: "space-between" }}>
           {matches ? (
@@ -68,8 +71,7 @@ const Header = () => {
                 height={"auto"}
                 onClick={refreshPage}
               />
-              <ResponsiveHeader/>
-        
+              <ResponsiveHeader />
             </>
           )}
         </Toolbar>
@@ -79,6 +81,19 @@ const Header = () => {
 };
 
 export default Header;
+
+// import * as React from "react";
+
+// import AppBar from "@mui/material/AppBar";
+// import Toolbar from "@mui/material/Toolbar";
+// import Typography from "@mui/material/Typography";
+// import Link from "next/link";
+// import { Container } from "@mui/material";
+
+// export default function Header() {
+//   return <>SSSSSSSSSSSS</>;
+// }
+
 export const navItems = [
   <Link href="/">Home</Link>,
   <Link href={"/Aboutus"}>About Us</Link>,
