@@ -67,7 +67,7 @@ const Index = () => {
             sx={{
               backgroundImage: "url(/brandprotfoli.jpg)",
               backgroundSize: "cover",
-              padding: isSmallScreen ? "70px" : "100px",
+              padding: isSmallScreen ? "100px" : "150px",
             }}
           >
             <TypographyText
@@ -276,9 +276,10 @@ const Index = () => {
         spacing={2}
         className={styles.homepadding}
         sx={{
-          marginTop: "30px",
+        
           backgroundSize: "cover",
-          marginBottom: "30px",
+          marginBottom: "2.5%",
+          marginTop:'1%',
 
           backgroundImage: `url('/pinkabout.jpg')`,
         }}

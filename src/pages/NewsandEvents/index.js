@@ -69,7 +69,7 @@ const Index = () => {
             sx={{
               backgroundImage: "url(/secondlast.avif)",
               backgroundSize: "cover",
-              padding: isSmallScreen ? "50px" : "100px",
+              padding: isSmallScreen ? "100px" : "150px",
             }}
           >
             <TypographyText
@@ -85,7 +85,7 @@ const Index = () => {
         container
         spacing={2}
         className={styles.homepadding}
-        sx={{ marginTop: "10px" }}
+        sx={{ marginTop: "1.5%" ,}}
       >
         {newsandevents.map((data, index) => (
           <Grid item xs={12} md={4} lg={4} sm={12} key={index}>
@@ -135,10 +135,10 @@ const Index = () => {
         spacing={2}
         className={styles.homepadding}
         sx={{
-          marginTop: "30px",
+       
           backgroundSize: "cover",
-          marginBottom: "30px",
-
+          marginBottom: "2.5%",
+          marginTop:'1%',
           backgroundImage: `url('/pinkabout.jpg')`,
         }}
       >

@@ -81,35 +81,35 @@ const Index = () => {
           md={12}
           lg={12}
           sm={12}
-          sx={{ marginTop: "20px", marginBottom: "10px" }}
+          sx={{ marginTop: "20px", marginBottom: "20px" }}
         >
-            <div data-aos="fade-up" data-aos-duration="1000">
-          <TypographyText
-            Typography={<>International and Regional Partners</>}
-            fontWeight="600"
-            variant={"h5"}
-            textAlign="centre"
+          <div data-aos="fade-up" data-aos-duration="1000">
+            <TypographyText
+              Typography={<>International and Regional Partners</>}
+              fontWeight="600"
+              variant={"h5"}
+              textAlign="centre"
             />
           </div>
           <div data-aos="zoom-in" data-aos-duration="1000">
-          <TypographyText
-            Typography={
-              <>
-                International partners are organizations or companies from
-                around the world that we collaborate with to reach a broader
-                audience, expand our market presence, and work together on
-                global initiatives.
-                <br />
-                <br />
-                Regional partners are local or nearby organizations that we
-                team up with to enhance our presence in specific geographic
-                areas, ensuring that our products or services are well-received
-                by local communities and customers.
-              </>
-            }
-            textAlign="justify"
+            <TypographyText
+              Typography={
+                <><br/>
+                  International partners are organizations or companies from
+                  around the world that we collaborate with to reach a broader
+                  audience, expand our market presence, and work together on
+                  global initiatives.
+                  <br />
+                  <br />
+                  Regional partners are local or nearby organizations that we
+                  team up with to enhance our presence in specific geographic
+                  areas, ensuring that our products or services are
+                  well-received by local communities and customers.
+                </>
+              }
+              textAlign="justify"
             />
-            </div>
+          </div>
         </Grid>
         {data.map((item, index) => (
           <Grid item xs={4} md={2.4} lg={1.5} sm={3} key={index}>
@@ -128,7 +128,7 @@ const Index = () => {
           md={12}
           lg={12}
           sm={12}
-          sx={{ marginTop: "20px", marginBottom: "10px" }}
+          sx={{ marginTop: "20px", marginBottom: "20px" }}
         >
           <div data-aos="fade-up" data-aos-duration="1000">
             <TypographyText
@@ -141,7 +141,7 @@ const Index = () => {
           <div data-aos="zoom-in" data-aos-duration="1000">
             <TypographyText
               Typography={
-                <>
+                <><br/>
                   Retail partners are trusted businesses that work with us to
                   make our products or services available to a wider audience.
                   They provide a physical or online platform for customers to

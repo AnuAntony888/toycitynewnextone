@@ -41,7 +41,7 @@ const Index = () => {
             sx={{
               backgroundImage: "url(/contactus.avif)",
               backgroundSize: "cover",
-              padding: isSmallScreen ? "50px" : "100px",
+              padding: isSmallScreen ?"100px" : "150px",
             }}
           >
             <TypographyText

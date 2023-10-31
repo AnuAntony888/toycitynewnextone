@@ -42,7 +42,7 @@ const Homesection3 = ({ large, matches, matches2 }) => {
         sx={{ paddingBottom: "30px" }}
         className={styles.homepadding1}
       >
-        <Grid item xs={12} md={6} lg={6} sm={12} sx={{ textAlign: "left" }}>
+        <Grid item xs={12} md={6} lg={6} sm={12} sx={{ textAlign: "left" ,margin:'auto'}}>
           <div data-aos="fade-up" data-aos-duration="1000">
             <TypographyText
               Typography={<>Want to know more?</>}

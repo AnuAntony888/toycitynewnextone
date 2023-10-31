@@ -13,7 +13,7 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 const Index = () => {
   const data = ["/abutuspage1.jpg"];
-  const data2 = ["/about2.jpg"];
+  const data2 = ["/banner.jpg"];
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
   const datas = [
@@ -214,14 +214,16 @@ const Index = () => {
           lg={6}
           sm={12}
           height={{
-            lg: "45vw",
-            md: "60vw",
+            lg: "30vw",
+            md: "30vw",
+            sm: "40vw",
+            xs: "55vw",
           }}
           sx={{ margin: "auto" }}
         >
           <img
             alt="toysbanner"
-            src="/who2.jpg"
+            src="/who.jpg"
             width="100%"
             className={styles.homeoffer1img}
             style={{ borderRadius: "30px" }}
@@ -234,7 +236,7 @@ const Index = () => {
         container
         spacing={2}
         className={styles.homepadding}
-        // sx={{ mt: "5px" }}
+        sx={{ mt:'2px',mb:'10px'}}
       >
         {vissionmission.map((data, index) => (
           <Grid item xs={12} md={6} lg={6} sm={12} key={index}>
@@ -297,9 +299,10 @@ const Index = () => {
           <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
             <TypographyText
               textAlign="left"
-              marginTop="10px"
+            
               Typography={
                 <>
+                <br/>
                   At ToyCity, we specialize in crafting comprehensive marketing
                   strategies tailored to your specific needs. We take pride in
                   designing effective marketing plans, launch strategies and
@@ -328,7 +331,7 @@ const Index = () => {
         container
         spacing={2}
         className={styles.homepadding}
-        sx={{ marginTop: "5px", marginBottom: "15px" }}
+        sx={{ marginTop: "10px", marginBottom: "15px" }}
       >
         <Banner
           data={data2}
@@ -355,7 +358,8 @@ const Index = () => {
           paddingBottom: "20px",
         }}
       >
-        <Grid item xs={12}>
+        <Grid item xs={12} 
+        sx={{margin:'1%'}}>
           <TypographyText
             Typography={<>360 Marketing </>}
             fontWeight="bolder"
@@ -408,9 +412,10 @@ const Index = () => {
         spacing={2}
         className={styles.homepadding}
         sx={{
-          marginTop: "30px",
+    
           backgroundSize: "cover",
-          marginBottom: "30px",
+          marginBottom: "2.5%",
+          marginTop:'1%',
 
           backgroundImage: `url('/pinkabout.jpg')`,
         }}

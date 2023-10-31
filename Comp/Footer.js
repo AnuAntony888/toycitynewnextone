@@ -96,15 +96,18 @@ const Footer = () => {
             color="whitesmoke"
           />
           <br /> <br />
-          <TextField
-            // className={classes.textField}
-            label="Search"
-            variant="outlined"
-            size="small"
-            sx={{ bgcolor: "white" }}
-          />
-          &nbsp; &nbsp;
-          <Buttons
+          <Grid container spacing={2} sx={{textAlign:"left"}}>
+  <Grid item lg={8} md={8} sm={12} xs={12}>
+  <TextField
+        
+        label="Search"
+        variant="outlined"
+        size="small"
+        sx={{ bgcolor: "white",width:'100%' }}
+      />
+  </Grid>
+  <Grid item lg={4} md={4} sm={12} xs={12} >
+  <Buttons
             Buttonname={"Read more"}
             fontWeight="bolder"
             color="#272974"
@@ -112,6 +115,11 @@ const Footer = () => {
             bgcolor1="red"
             color1="white"
           />
+  </Grid>
+  </Grid>
+         
+          &nbsp; &nbsp;
+    
           <br />
           <br />
           <Grid container spacing={1} sx={{ textAlign: "left" }}>
