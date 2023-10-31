@@ -128,6 +128,8 @@ const Footer = () => {
               {data.icon}
             </Grid>
           ))}
+                    <br />
+          <br />
             </Grid>
         </Grid>
       </Grid>
