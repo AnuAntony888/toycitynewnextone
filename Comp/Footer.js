@@ -174,7 +174,7 @@ const post = [
   },
 ];
 
-const Socialicon = [
+export const Socialicon = [
   {
     icon: <FacebookIcon sx={{ color: "white" }} />,
   },

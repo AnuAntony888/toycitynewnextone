@@ -100,8 +100,8 @@ const Homesection3 = ({ large, matches, matches2 }) => {
                     xs={12}
                     height={{
                       lg: "25vw",
-                      md: "20vw",
-                      sm: "20vw",
+                      md: "30vw",
+                      sm: "30vw",
                       xs: "55vw",
                     }}
                   >
