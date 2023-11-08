@@ -90,7 +90,8 @@ export default function Header() {
                       spacing={2}
                       sx={{
                         marginTop: "6%",
-                        justifyContent:'center'
+                        justifyContent: 'start',
+                        marginLeft:'20px !important'
                       }}
                     >
                       {Socialicon.map((data, index) => (
@@ -117,14 +118,15 @@ export default function Header() {
                       spacing={2}
                       sx={{
                         marginTop: "8%",
-                        justifyContent:'center'
+                        justifyContent: 'end',
+                 
                       }}
                     >
                       <Button
                         sx={{
                           color: "darkblue",
                           fontWeight: "500",
-
+                          marginRight:'20px  !important',
                           fontFamily: "Rubik",
                           fontSize: ".9rem",
                           textTransform: "lowercase",
@@ -184,6 +186,7 @@ export const navItems = [
   <Link href={"/Partners"}>Partners</Link>,
   <Link href={"/NewsandEvents"}>News and events</Link>,
   <Link href={"/Contact"}>Contact</Link>,
+  <Link href={"/Blogs"}>Blogs</Link>,
 ];
 const Socialicon = [
   {

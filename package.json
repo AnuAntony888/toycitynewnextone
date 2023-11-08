@@ -19,6 +19,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-facebook-login": "^4.1.1",
+    "react-lazy-load-image-component": "^1.6.0",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1"
   },
