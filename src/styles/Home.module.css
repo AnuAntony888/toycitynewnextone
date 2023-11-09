@@ -126,7 +126,7 @@ right: calc(100vw + 100px); /* Move to the left edge of the viewport */
 .blog_image_list {
   border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    height: 250px !important;
+    height: 200px !important;
     object-fit: cover;
     width: 100%;
 }

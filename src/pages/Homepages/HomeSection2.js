@@ -193,40 +193,7 @@ const HomeSection2 = () => {
         </Grid>
       </div>
 
-      {/* <Grid
-        container
-        columnSpacing={{ xs: 1, sm: 1, md: 1 }}
-        rowSpacing={1}
-        sx={{ pt: "2%", pb: "2%" }}
-        className={styles.homepadding2}
-      >
-        {data1?.map((curElem, index) => (
-          <Grid item xs={4} md={2.4} lg={1.5} sm={3} key={index}>
-            {curElem.img ? (
-              // Render an image if curElem.imageUrl is available
-              <CardMedia
-                component="img"
-                image={curElem.img}
-                width={"100%"}
-                alt={""}
-                className="image-card"
-                sx={{ borderRadius: "25px" }}
-              />
-            ) : (
-              // Render a placeholder (skeleton) if curElem.imageUrl is not available
-              <Skeleton
-                variant="rectangular"
-                width="100%"
-                height={230}
-                sx={{
-                  backgroundColor: "#f0f0f0",
-                  borderRadius: "4px",
-                }}
-              />
-            )}
-          </Grid>
-        ))}
-        </Grid> */}
+     
       {/********************************************************* */}
       <div className={styles.homepadding}>
         <Slider {...settings}>
